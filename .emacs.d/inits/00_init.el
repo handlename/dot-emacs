@@ -1,6 +1,25 @@
 ;; server
 (server-start)
 
+;; PATH
+;; http://sakito.jp/emacs/emacsshell.html#path
+(dolist (dir (list
+              "/usr/X11/bin"
+              "/usr/local/bin"
+              "/sbin"
+              "/usr/sbin"
+              "/bin"
+              "/usr/bin"
+              "/usr/local/mysql/bin"
+              "/Developer/Tools"
+              "/usr/local/sbin"
+              "/usr/local/bin"
+              (expand-file-name "~/perl5/perlbrew/perls/current/bin")
+              (expand-file-name "~/bin")))
+  (when (file-exists-p dir)
+    (setenv "PATH" (concat dir ":" (getenv "PATH")))
+    (setq exec-path (append (list dir) exec-path))))
+
 ;; mail address
 (setq user-mail-address "nagata@handlena.me")
 

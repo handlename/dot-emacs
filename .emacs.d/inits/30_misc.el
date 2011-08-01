@@ -15,7 +15,7 @@
   "safe-save-buffers-kill-emacs"
   (unless (y-or-n-p "Really exit emacs? ")
     (keyboard-quit)))
-;;;;;
+
 ;; sequential-command
 ;; (auto-install-batch "sequential-command")
 (require 'sequential-command-config)
@@ -29,7 +29,7 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-ignore-buffers-re "*[^*]+*")
-;;;;
+
 ;; sudo-ext
 ;; (install-elisp-from-emacswiki "sudo-ext.el")
 (require 'sudo-ext)

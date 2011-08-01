@@ -54,7 +54,7 @@
 (ap:add-project
  :name 'perl
  :look-for '("Makefile.PL" "Build.PL")
- :include-regexp '("\\.pm$" "\\.t$" "\\.pl$" "\\.PL$" "\\.mt$" "\\.tt$")
+ :include-regexp '("\\.pm$" "\\.t$" "\\.pl$" "\\.PL$" "\\.mt$" "\\.tt$" "\\.tx$")
  :exclude-regexp '("/tmp" "/service")
  )
 

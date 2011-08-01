@@ -20,3 +20,6 @@
 
 ;; make y/n alias of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; stop blink cursor
+(blink-cursor-mode 0)

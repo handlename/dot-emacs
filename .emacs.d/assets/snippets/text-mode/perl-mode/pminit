@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: default for pm file
+# --
+package $1;
+use strict;
+use warnings;

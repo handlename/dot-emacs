@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: kayac: repository report mail
+# --
+$1さん
+インフラチームの長田です。
+
+
+下記の件、対応しました。
+
+svn: https://project.kayac.com/svn/$2
+redmine: https://project.kayac.com/redmine/projects/$2
+
+※redmineのメンバー追加は設定画面から行ってください
+https://project.kayac.com/redmine/projects/$2/settings/members
+
+リポジトリの読み取り専用アカウントは
+id: $2_ro
+pw: 添付画像参照
+です。
+
+
+よろしくお願いします！

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: koshien-prefecture
+# --
+$c->prefecture_name($${1:player}->school->prefecture)

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: koshien-avatar-path
+# --
+$${1:player}->member->profile->avatar_upper_url

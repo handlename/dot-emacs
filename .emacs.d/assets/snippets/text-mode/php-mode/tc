@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: try { ... } catch(...) { ... }
+# --
+try {
+    $0
+}
+catch(Exception $e) {
+
+}

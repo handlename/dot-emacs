@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: stash
+# --
+$c->stash->{$1} = $2;

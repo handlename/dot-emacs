@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: class { ... }
+# --
+/**
+ * ${description}
+ *
+ * @author NAGATA Hiroaki
+ */
+class ${className} {
+    public function __construct() {
+        $0
+    }
+}

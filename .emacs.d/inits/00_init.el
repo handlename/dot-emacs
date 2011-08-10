@@ -5,7 +5,6 @@
 ;; http://sakito.jp/emacs/emacsshell.html#path
 (dolist (dir (list
               "/usr/X11/bin"
-              "/usr/local/bin"
               "/sbin"
               "/usr/sbin"
               "/bin"
@@ -16,7 +15,8 @@
               "/usr/local/bin"
               (expand-file-name "~/perl5/perlbrew/perls/current/bin")
               (expand-file-name "~/bin")))
-  (when (file-exists-p dir)
+  (when (and (file-exists-p dir) (not (member dir exec-path)))
+    (print dir)
     (setenv "PATH" (concat dir ":" (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 

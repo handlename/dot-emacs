@@ -3,6 +3,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/apel")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evernote-mode")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/hatena-diary")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/html-helper-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")

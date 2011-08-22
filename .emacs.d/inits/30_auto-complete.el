@@ -6,17 +6,45 @@
 (require 'auto-complete-config)
 (require 'auto-complete-etags)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/assets/ac-dict")
-(ac-config-default)
 (global-set-key (kbd "M-_") 'auto-complete)
 (setq ac-auto-start 1)
 (setq ac-auto-show-menu 0.2)
+
+(setq ac-modes
+      '(c++-mode
+        c-mode
+        cc-mode
+        cperl-mode
+        css-mode
+        ecmascript-mode
+        emacs-lisp-mode
+        html-helper-mode
+        java-mode
+        javascript-mode
+        js-mode
+        js2-mode
+        lisp-interaction-mode
+        lisp-mode
+        makefile-mode
+        objc-mode
+        org-mode
+        perl-mode
+        php-mode
+        python-mode
+        ruby-mode
+        scala-mode
+        sh-mode
+        tmt-mode
+        xml-mode
+        yaml-mode))
 
 (defun auto-complete-init-sources ()
   (setq ac-sources '(ac-source-yasnippet
                      ac-source-dictionary
                      ac-source-gtags
-                     ac-source-words-in-buffer)))
-(auto-complete-init-sources)
+                     ac-source-words-in-same-mode-buffers)))
+
+(global-auto-complete-mode t)
 
 ;; company
 ;; (install-elisp "http://nschum.de/src/emacs/company-mode/company-0.5.tar.bz2")
@@ -26,65 +54,44 @@
 (require 'ac-company)
 
 ;; for cperl-mode
-(if (require 'cperl-mode nil t)
-    (add-to-list 'ac-modes 'cperl-mode)
-    (setq plcmp-use-keymap nil)
-  (require 'perl-completion)
-  (add-hook 'cperl-mode-hook
-            '(lambda ()
-               (progn
-                 (auto-complete-init-sources)
-                 (add-to-list 'ac-sources 'ac-source-perl-completion)
-                 (perl-completion-mode t)
-                 ))))
+(require 'perl-completion)
+(add-hook 'cperl-mode-hook
+          '(lambda ()
+             (setq plcmp-use-keymap nil)
+             (auto-complete-init-sources)
+             (add-to-list 'ac-sources 'ac-source-perl-completion)
+             (perl-completion-mode t)))
 
 ;; for emacs-lisp-mode
-(if (require 'emacs-lisp-mode nil t)
-    (add-to-list 'ac-modes 'emacs-lisp-mode)
-    (add-hook 'emacs-lisp-mode-hook
-              '(lambda ()
-                 (auto-complete-init-sources)
-                 (add-to-list 'ac-sources 'ac-source-functions)
-                 (add-to-list 'ac-sources 'ac-source-symbols))))
+(add-hook 'emacs-lisp-mode-hook
+          '(lambda ()
+             (auto-complete-init-sources)
+             (add-to-list 'ac-sources 'ac-source-functions)
+             (add-to-list 'ac-sources 'ac-source-symbols)))
 
 ;; for yaml-mode
-(if (require 'yaml-mode nil t)
-    (add-hook 'yaml-mode-hook
-              '(lambda ()
-                 (auto-complete-init-sources)
-                 (setq ac-sources '(ac-source-words-in-buffer)))))
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (auto-complete-init-sources)))
 
 ;; for objc-mode
-(if (require 'objc-mode nil t)
-    (add-to-list 'ac-modes 'objc-mode)
-  (require 'etags-table)
-  (add-to-list  'etags-table-alist
-                '("\\.[mh]$" "~/.emacs.d/tags/objc.TAGS"))
-  (defvar ac-source-etags-table
-    '((candidates . (lambda ()
-                      (all-completions ac-target (tags-completion-table))))
-      (candidate-face . ac-candidate-face)
-      (selection-face . ac-selection-face)
-      (requires . 1))
-    "add etags to ac-source")
-  (add-hook 'objc-mode-hook
-            (lambda ()
-              (push 'ac-source-company-xcode ac-sources)
-              (push 'ac-source-c++-keywords ac-sources)
-              (push 'ac-source-etags-table ac-sources))))
+(require 'etags-table)
+(add-to-list  'etags-table-alist
+              '("\\.[mh]$" "~/.emacs.d/tags/objc.TAGS"))
+(defvar ac-source-etags-table
+  '((candidates . (lambda ()
+                    (all-completions ac-target (tags-completion-table))))
+    (candidate-face . ac-candidate-face)
+    (selection-face . ac-selection-face)
+    (requires . 1))
+  "add etags to ac-source")
+(add-hook 'objc-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-company-xcode)
+            (add-to-list 'ac-sources 'ac-source-c++-keywords)
+            (add-to-list 'ac-sources 'ac-source-etags-table)))
 
-;; for html-helper-mode
-(if (require 'html-helper-mode nil t)
-    (add-to-list 'ac-modes 'html-helper-mode))
-
-;; for javascript-mode
-(if (require 'javascript-mode nil t)
-    (add-to-list 'ac-modes 'javascript-mode))
-
-;; for tmt-mode
-(if (require 'tmt-mode nil t)
-    (add-to-list 'ac-modes 'tmt-mode))
-
-;; for yaml-mode
-(if (require 'yaml-mode nil t)
-    (add-to-list 'ac-modes 'yaml-mode))
+;; for org-mode
+(add-hook 'org-mode-hook
+          (lambda ()
+            (auto-complete-init-sources)))

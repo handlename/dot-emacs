@@ -9,6 +9,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-mode/lisp")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/yatex/")
 
 (require 'init-loader)
 (init-loader-load "~/.emacs.d/inits")

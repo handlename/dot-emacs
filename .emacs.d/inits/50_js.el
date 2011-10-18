@@ -8,7 +8,8 @@
 ;; INSTALL:
 ;; (install-elisp "http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode/js2-highlight-vars.el")
 
-(custom-set-variables '(js2-rebind-eol-bol-keys nil))
+(custom-set-variables
+ '(js2-rebind-eol-bol-keys nil))
 
 (require 'js2-mode)
 (require 'js2-highlight-vars)
@@ -20,6 +21,8 @@
 (set-face-background  'js2-highlight-vars-face nil)
 (set-face-underline-p 'js2-highlight-vars-face t)
 (set-face-underline   'js2-highlight-vars-face "#7F7FFF")
+
+(define-key js2-mode-map (kbd "C-m") nil)
 
 (add-hook 'js2-mode-hook
           '(lambda ()

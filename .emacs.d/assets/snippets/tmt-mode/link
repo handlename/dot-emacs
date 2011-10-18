@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: link
+# --
+<a href="$1" style="color:$2;"><span style="color:$2">$3</span></a>

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: function foo(...) { ... }
+# --
+function $1($2) {
+    $3
+}

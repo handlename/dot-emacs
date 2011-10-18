@@ -29,3 +29,14 @@
 (defun string-width-in-region (start end)
   (interactive "r")
   (princ (string-width (buffer-substring start end))))
+
+;; init screens
+(defun init-default-screens ()
+  (interactive)
+  (progn
+    ; org-agenda
+    (elscreen-create)
+    (org-agenda)
+    ; riece
+    (elscreen-create)
+    (riece)))

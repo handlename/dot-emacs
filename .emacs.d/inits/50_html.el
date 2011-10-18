@@ -8,10 +8,10 @@
 (setq html-helper-verbose nil)
 (defvar html-helper-new-buffer-template
   '("<!DOCTYPE html>\n"
-    "<html>\n"
+    "<html lang=\"ja\">\n"
     "\n"
     "<head>\n"
-    "<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\n"
+    "<meta charset=\"utf-8\">\n"
     "<title></title>\n"
     "</head>\n"
     "\n"

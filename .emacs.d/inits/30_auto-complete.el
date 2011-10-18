@@ -1,10 +1,29 @@
 ;; INSTALL
-;; (auto-complete-batch "auto-complete development version")
+;; (auto-install-batch "auto-complete development version")
 ;; (auto-install-from-emacswiki "auto-complete-etags.el")
 ;; (auto-install-from-emacswiki "etags-table.el")
-
 (require 'auto-complete-config)
 (require 'auto-complete-etags)
+
+;; company
+;; INSTALL
+;; (install-elisp "http://nschum.de/src/emacs/company-mode/company-0.5.tar.bz2")
+
+;; ac-company
+;; INSTALL
+;; (install-elisp "https://raw.github.com/buzztaiki/auto-complete/master/ac-company.el")
+(require 'ac-company)
+
+;; etacs-table
+;; INSTALL
+;; (install-elisp "http://bitbucket.org/sakito/dot.emacs.d/raw/tip/local-lisp/etags-table.el")
+(require 'etags-table)
+
+;; auto-complete-clang
+;; INSTALL
+;; (install-elisp "https://raw.github.com/brianjcj/auto-complete-clang/master/auto-complete-clang.el")
+(require 'auto-complete-clang)
+
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/assets/ac-dict")
 (global-set-key (kbd "M-_") 'auto-complete)
 (setq ac-auto-start 1)
@@ -38,47 +57,33 @@
         xml-mode
         yaml-mode))
 
-(defun auto-complete-init-sources ()
-  (setq ac-sources '(ac-source-yasnippet
-                     ac-source-dictionary
-                     ac-source-gtags
-                     ac-source-words-in-same-mode-buffers)))
+(setq-default ac-sources '(ac-source-yasnippet
+                           ac-source-dictionary
+                           ac-source-gtags
+                           ac-source-words-in-same-mode-buffers))
 
 (global-auto-complete-mode t)
 
-;; company
-;; (install-elisp "http://nschum.de/src/emacs/company-mode/company-0.5.tar.bz2")
-
-;; ac-company
-;; (install-elisp "https://raw.github.com/buzztaiki/auto-complete/master/ac-company.el")
-(require 'ac-company)
-
 ;; for cperl-mode
+(setq plcmp-use-keymap nil)
 (require 'perl-completion)
 (add-hook 'cperl-mode-hook
           '(lambda ()
              (setq plcmp-use-keymap nil)
-             (auto-complete-init-sources)
              (add-to-list 'ac-sources 'ac-source-perl-completion)
              (perl-completion-mode t)))
 
 ;; for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook
           '(lambda ()
-             (auto-complete-init-sources)
              (add-to-list 'ac-sources 'ac-source-functions)
              (add-to-list 'ac-sources 'ac-source-symbols)))
 
-;; for yaml-mode
-(add-hook 'yaml-mode-hook
-          '(lambda ()
-             (auto-complete-init-sources)))
-
 ;; for objc-mode
-(require 'etags-table)
-(add-to-list  'etags-table-alist
-              '("\\.[mh]$" "~/.emacs.d/tags/objc.TAGS"))
-(defvar ac-source-etags-table
+(ac-company-define-source ac-source-company-xcode company-xcode)
+(add-to-list 'etags-table-alist
+             '("\\.[mh]$" "~/.emacs.d/tags/objc.TAGS"))
+(defvar ac-source-objc-etags
   '((candidates . (lambda ()
                     (all-completions ac-target (tags-completion-table))))
     (candidate-face . ac-candidate-face)
@@ -87,11 +92,17 @@
   "add etags to ac-source")
 (add-hook 'objc-mode-hook
           (lambda ()
-            (add-to-list 'ac-sources 'ac-source-company-xcode)
-            (add-to-list 'ac-sources 'ac-source-c++-keywords)
-            (add-to-list 'ac-sources 'ac-source-etags-table)))
+            ;(add-to-list 'ac-sources 'ac-source-c++-keywords)
+            (add-to-list 'ac-sources 'ac-source-clang)
+            ;(add-to-list 'ac-sources 'ac-source-objc-etags)
+            (add-to-list 'ac-sources 'ac-source-company-xcode)))
 
-;; for org-mode
-(add-hook 'org-mode-hook
+;; for c-mode
+(add-hook 'c-mode-hook
           (lambda ()
-            (auto-complete-init-sources)))
+            (add-to-list 'ac-sources 'ac-source-clang)))
+
+;; for c++-mode
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-clang)))

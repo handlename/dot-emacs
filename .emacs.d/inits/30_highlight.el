@@ -15,6 +15,13 @@
 
 ;; highlight edit characters
 (require 'jaspace)
-(setq jaspace-highlight-tabs t)
+(setq jaspace-highlight-tabs ?|)
 (setq jaspace-highlight-jaspace-face t)
+(set-face-foreground 'jaspace-highlight-tab-face "#555555")
 (add-hook 'mmm-mode-hook 'jaspace-mmm-mode-hook)
+
+(dolist (mode '('js-mode
+                'js2-mode
+                'makefile-mode
+                'makefile-bsdmake-mode))
+  (add-to-list 'jaspace-modes mode))

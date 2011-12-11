@@ -144,4 +144,6 @@
     (progn
       (flymake-perl-load)
       (local-set-key (kbd "C-x m") 'perldoc-m)
-      (local-set-key (kbd "C-x C-e") 'perl-eval))))
+      (local-set-key (kbd "C-x C-e") 'perl-eval)
+      (local-set-key (kbd "C-c C-p d") 'plcmp-cmd-show-doc)
+      (local-set-key (kbd "C-c C-p D") 'plcmp-cmd-show-doc-at-point))))

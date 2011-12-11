@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-x M-f")   'fill-region)
 (global-set-key (kbd "M-g")       'goto-line)
 (global-set-key (kbd "C-S-i")     'indent-region)
+(global-set-key (kbd "C-S-o")     'join-line)
 (global-set-key (kbd "C-m")       'newline-and-indent)
 (global-set-key (kbd "C-t")       'next-multiframe-window)
 (global-set-key (kbd "M-<RET>")   'ns-toggle-fullscreen)

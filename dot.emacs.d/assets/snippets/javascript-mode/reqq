@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: var Hoge = require("./Hoge").Hoge
+# --
+var $1 = require("./$1").$1;

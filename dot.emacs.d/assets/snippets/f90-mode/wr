@@ -1,4 +1,3 @@
-#contributor: Li Zhu <http://www.zhuli.name>
 #name : write (*,*)
 # --
 write (${1:*},${2:*}) $0

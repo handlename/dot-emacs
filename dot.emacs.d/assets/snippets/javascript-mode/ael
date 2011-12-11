@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: addEventListener(type, handler, capture)
+# --
+addEventListener(${1:type}, ${2:handler}, ${0:capture})

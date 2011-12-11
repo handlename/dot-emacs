@@ -1,5 +1,4 @@
 #name : function template
-#contributor : Xah Lee
 # --
 (defun $1 ()
   "thisandthat."

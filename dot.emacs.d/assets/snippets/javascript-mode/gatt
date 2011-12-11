@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: getAttribute(...)
+# --
+getAttribute($0)

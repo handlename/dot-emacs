@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: console.trace()
+# --
+console.trace();

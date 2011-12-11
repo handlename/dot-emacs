@@ -1,4 +1,3 @@
-#contributor : Anders Bach Nielsen <abachn@abachn.net>
 #name : <tag> \n...\n</tag>
 # --
 <${1:tag}>

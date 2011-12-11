@@ -1,4 +1,3 @@
-#contributor : Jimmy Wu <frozenthrone88@gmail.com>
-#name : <img src="..." class="..." alt="..." />
+#name : <img src="..." width="..." hegiht="..." class="..." alt="..." />
 # --
-<img src="$1" class="$2" alt="$3" />
+<img src="$1" width="$2" height="$3"${4: class="$5"}${6: alt="$7"} />$0

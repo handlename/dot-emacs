@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: setAttribute(..., ...)
+# --
+setAttribute($1, $0)

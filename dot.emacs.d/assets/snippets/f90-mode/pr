@@ -1,4 +1,3 @@
-#contributor: Li Zhu <http://www.zhuli.name>
 #name : program ... end program ...
 # --
 program ${1:name}

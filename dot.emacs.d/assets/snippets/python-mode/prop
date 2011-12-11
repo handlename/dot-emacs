@@ -1,4 +1,3 @@
-# contributor: Mads D. Kristensen <madsdk@gmail.com>
 # name: prop
 # --
 def ${1:foo}():

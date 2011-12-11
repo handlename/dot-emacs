@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: getElementsByTagName(...)
+# --
+getElementsByTagName($0)

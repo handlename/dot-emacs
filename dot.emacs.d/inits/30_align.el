@@ -1,39 +1,27 @@
 (require 'align)
 
-;; Align for php-mode
+;; Align for cperl-mode, php-mode
 ;; http://d.hatena.ne.jp/Tetsujin/20070614/1181757931
+;; modified
 (add-to-list 'align-rules-list
              '(php-assignment
                (regexp   . "[^-=!^&*+<>/.| \t\n]\\(\\s-*[.-=!^&*+<>/|]*\\)=>?\\(\\s-*\\)\\([^= \t\n]\\|$\\)")
                (justify  . t)
                (tab-stop . nil)
-               (modes    . '(php-mode))))
-(add-to-list 'align-dq-string-modes 'php-mode)
-(add-to-list 'align-sq-string-modes 'php-mode)
-(add-to-list 'align-open-comment-modes 'php-mode)
-(setq align-region-separate (concat "\\(^\\s-*$\\)\\|"
-                                    "\\([({}\\(/\*\\)]$\\)\\|"
-                                    "\\(^\\s-*[)}\\(\*/\\)][,;]?$\\)\\|"
-                                    "\\(^\\s-*\\(}\\|for\\|while\\|if\\|else\\|"
-                                    "switch\\|case\\|break\\|continue\\|do\\)[ ;]\\)"
-                                    ))
+               (separate . (concat "\\(^\\s-*$\\)\\|"
+                                   "\\([({}\\(/\*\\)]$\\)\\|"
+                                   "\\(^\\s-*[)}\\(\*/\\)][,;]?$\\)\\|"
+                                   "\\(^\\s-*\\(}\\|for\\|while\\|if\\|else\\|"
+                                   "switch\\|case\\|break\\|continue\\|do\\)[ ;]\\)")
+               (modes    . '(cperl-mode php-mode))))
 
-;; for cperl-mode
-(add-to-list 'align-rules-list
-             '(perl-assignment
-               (regexp   . "[^-=!^&*+<>/.| \t\n]\\(\\s-*[.-=!^&*+<>/|]*\\)=>?\\(\\s-*\\)\\([^= \t\n]\\|$\\)")
-               (justify  . t)
-               (tab-stop . nil)
-               (modes    . '(cperl-mode))))
 (add-to-list 'align-dq-string-modes 'cperl-mode)
 (add-to-list 'align-sq-string-modes 'cperl-mode)
 (add-to-list 'align-open-comment-modes 'cperl-mode)
-(setq align-region-separate (concat "\\(^\\s-*$\\)\\|"
-                                    "\\( [({}\\[\\]\\(/\*\\)]$ \\)\\|"
-                                    "\\(^\\s-*[)}\\(\*/\\)][,;]?$\\)\\|"
-                                    "\\(^\\s-*\\(}\\|for\\|while\\|if\\|else\\|"
-                                    "switch\\|case\\|break\\|continue\\|do\\)[ ;]\\)"
-                                    ))
+
+(add-to-list 'align-dq-string-modes 'php-mode)
+(add-to-list 'align-sq-string-modes 'php-mode)
+(add-to-list 'align-open-comment-modes 'php-mode)
 
 ;; for ruby-mode
 ;; http://d.hatena.ne.jp/rubikitch/20080227/1204051280

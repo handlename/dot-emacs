@@ -1,3 +1,5 @@
+;; -*- emacs-lisp -*-
+
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 (add-to-list 'load-path "~/.emacs.d/auto-install")
 
@@ -5,6 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/evernote-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/hatena-diary")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/html-helper-mode")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/js-doc")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/js2-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/magit")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/org-mode/lisp")

@@ -2,23 +2,17 @@
 (server-start)
 
 ;; PATH
-;; http://sakito.jp/emacs/emacsshell.html#path
-(dolist (dir (list
-              "/usr/X11/bin"
-              "/sbin"
-              "/usr/sbin"
-              "/bin"
-              "/usr/bin"
-              "/usr/local/mysql/bin"
-              "/Developer/Tools"
-              "/usr/local/sbin"
-              "/usr/local/bin"
-              (expand-file-name "~/perl5/perlbrew/perls/current/bin")
-              (expand-file-name "~/bin")))
-  (when (and (file-exists-p dir) (not (member dir exec-path)))
-    (print dir)
-    (setenv "PATH" (concat dir ":" (getenv "PATH")))
-    (setq exec-path (append (list dir) exec-path))))
+;; http://d.hatena.ne.jp/syohex/20111117/1321503477
+;;
+;; add script below to .zshrc
+;; <script>
+;; perl -wle \
+;;     'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
+;;     PATH > ~/.emacs.d/shellenv.el
+;; </script>
+(load-file (expand-file-name "~/.emacs.d/shellenv.el"))
+(dolist (path (reverse (split-string (getenv "PATH") ":")))
+  (add-to-list 'exec-path path))
 
 ;; mail address
 (setq user-mail-address "nagata@handlena.me")

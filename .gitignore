@@ -1,13 +1,14 @@
 *~
 .ap-project-files
-dot.emacs.d/site-lisp
 dot.emacs.d/ac-comphist.dat
 dot.emacs.d/anything-c-adaptive-history
 dot.emacs.d/auto-install
 dot.emacs.d/auto-save-list
-dot.emacs.d/bookmarks
-dot.emacs.d/inits/00_private.el
 dot.emacs.d/bin
+dot.emacs.d/bookmarks
 dot.emacs.d/eshell
+dot.emacs.d/inits/00_private.el
+dot.emacs.d/shellenv.el
+dot.emacs.d/site-lisp
 dot.emacs.d/tags
 dot.emacs.d/tramp

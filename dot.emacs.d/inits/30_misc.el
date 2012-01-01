@@ -38,3 +38,8 @@
 ;; (install-elisp-from-emacswiki "open-junk-file.el")
 (require 'open-junk-file)
 (setq open-junk-file-format "~/junk/%Y/%m/%Y%m%d_%H%M%S.")
+
+;; srep
+;; http://d.hatena.ne.jp/ken_m/20111219/1324318727
+;; (install-elisp "https://raw.github.com/kmorimoto/srep/master/srep.el")
+(require 'srep)

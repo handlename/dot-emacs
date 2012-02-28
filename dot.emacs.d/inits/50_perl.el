@@ -14,6 +14,7 @@
 (add-to-list 'auto-mode-alist '("\\.pl$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.pm$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
+(add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 
 ;; use perl installed by perlbrew
 ;; http://d.hatena.ne.jp/kiririmode/20100925/p1

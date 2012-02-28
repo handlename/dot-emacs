@@ -51,3 +51,9 @@
 
 ;; set time local
 (setq system-time-locale "C")
+
+;; for m-x shell-command
+(setq shell-file-name "/bin/bash")
+
+;; for m-x shell
+(setq explicit-shell-file-name "/bin/zsh")

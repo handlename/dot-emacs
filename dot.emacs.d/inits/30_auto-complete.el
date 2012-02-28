@@ -79,24 +79,6 @@
              (add-to-list 'ac-sources 'ac-source-functions)
              (add-to-list 'ac-sources 'ac-source-symbols)))
 
-;; for objc-mode
-(ac-company-define-source ac-source-company-xcode company-xcode)
-(add-to-list 'etags-table-alist
-             '("\\.[mh]$" "~/.emacs.d/tags/objc.TAGS"))
-(defvar ac-source-objc-etags
-  '((candidates . (lambda ()
-                    (all-completions ac-target (tags-completion-table))))
-    (candidate-face . ac-candidate-face)
-    (selection-face . ac-selection-face)
-    (requires . 1))
-  "add etags to ac-source")
-(add-hook 'objc-mode-hook
-          (lambda ()
-            ;(add-to-list 'ac-sources 'ac-source-c++-keywords)
-            (add-to-list 'ac-sources 'ac-source-clang)
-            ;(add-to-list 'ac-sources 'ac-source-objc-etags)
-            (add-to-list 'ac-sources 'ac-source-company-xcode)))
-
 ;; for c-mode
 (add-hook 'c-mode-hook
           (lambda ()

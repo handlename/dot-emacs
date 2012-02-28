@@ -12,7 +12,7 @@
                                    "\\([({}\\(/\*\\)]$\\)\\|"
                                    "\\(^\\s-*[)}\\(\*/\\)][,;]?$\\)\\|"
                                    "\\(^\\s-*\\(}\\|for\\|while\\|if\\|else\\|"
-                                   "switch\\|case\\|break\\|continue\\|do\\)[ ;]\\)")
+                                   "switch\\|case\\|break\\|continue\\|do\\)[ ;]\\)"))
                (modes    . '(cperl-mode php-mode))))
 
 (add-to-list 'align-dq-string-modes 'cperl-mode)

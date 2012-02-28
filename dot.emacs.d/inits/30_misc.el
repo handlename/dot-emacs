@@ -57,3 +57,9 @@
                  css-mode
                  js2-mode
                  sh-mode)))
+
+;; expand-region
+;; https://github.com/magnars/expand-region.el
+(require 'expand-region)
+(global-set-key (kbd "C-M-SPC") 'er/expand-region)
+(transient-mark-mode t)

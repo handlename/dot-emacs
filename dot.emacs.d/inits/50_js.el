@@ -1,7 +1,8 @@
 ;; js2-mode
-;; http://code.google.com/p/js2-mode/
+;; ORIGINAL: http://code.google.com/p/js2-mode
+;; FORKED: https://github.com/mooz/js2-mode
 ;; INSTALL:
-;; svn checkout http://js2-mode.googlecode.com/svn/trunk/ js2-mode-read-only
+;; git clone https://github.com/mooz/js2-mode.git
 
 ;; js2-highlight-vars-mode
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode
@@ -30,7 +31,6 @@
              (setq js-indent-level 4
                    js-expr-indent-offset 4
                    indent-tabs-mode nil)
-             (set (make-local-variable 'indent-line-function) 'js-indent-line)
              (if (featurep 'js2-highlight-vars)
                  (js2-highlight-vars-mode))))
 
@@ -40,3 +40,10 @@
           '(lambda ()
              (local-set-key (kbd "C-c i") 'js-doc-insert-function-doc)
              (local-set-key (kbd "@") 'js-doc-insert-tag)))
+
+;; moz-repl
+;; INSTALL
+;; (install-elisp "https://raw.github.com/bard/mozrepl/master/chrome/content/moz.el")
+(add-hook 'js2-mode-hook
+          '(lambda ()
+             (local-set-key (kbd "C-c C-r") 'moz-send-region)))

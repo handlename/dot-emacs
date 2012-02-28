@@ -1,3 +1,3 @@
 #name : ... while ...
 # --
-${1:expression} while ${2:condition};
+${1:expression} while ${0:condition};

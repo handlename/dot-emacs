@@ -1,0 +1,7 @@
+# -*- snippet -*-
+#name : -(void)releaseIBOutlets { ... }
+# --
+-(void)releaseIBOutlets {
+    $0
+    [super releaseIBOutlets];
+}

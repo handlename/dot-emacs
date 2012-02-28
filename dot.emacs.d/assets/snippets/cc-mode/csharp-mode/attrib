@@ -1,6 +1,0 @@
-#name : private attribute ....;
-# --
-/// <summary>
-/// $3
-/// </summary>
-private $1 $2;

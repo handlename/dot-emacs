@@ -1,0 +1,7 @@
+# -*- snippet -*-
+#name : @implementation ... @end
+#key  : @implementation
+# --
+@implementation $1
+$0
+@end

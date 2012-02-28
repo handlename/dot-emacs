@@ -1,0 +1,4 @@
+# -*- snippet -*-
+#name : use Data::Dumper; warn Dumper ...;
+# --
+use Data::Dumper; warn Dumper $0;

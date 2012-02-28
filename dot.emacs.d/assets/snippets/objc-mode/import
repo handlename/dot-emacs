@@ -1,0 +1,4 @@
+# -*- snippet -*-
+#name : #import "....h"
+# --
+#import "$0.h"

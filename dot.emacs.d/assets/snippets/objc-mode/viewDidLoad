@@ -1,0 +1,7 @@
+# -*- snippet -*-
+#name : -(void)viewDidLoad { ... }
+# --
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    $0
+}

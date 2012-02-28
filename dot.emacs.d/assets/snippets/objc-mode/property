@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+#name : @property (...) ...;
+#key  : @property
+# --
+@property (${1:nonatomic, retain}) $0;

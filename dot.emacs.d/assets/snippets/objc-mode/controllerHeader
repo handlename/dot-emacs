@@ -1,0 +1,9 @@
+# -*- snippet -*-
+#name : Initialize header file for controller.
+# --
+#import "common.h"
+#import "BaseController.h"
+
+@interface $1Controller : BaseController
+$0
+@end

@@ -72,3 +72,14 @@
 
 (global-set-key (kbd "C--") 'search-forward-with-char-sequential)
 (global-set-key (kbd "C-$") 'search-backward-with-char-sequential)
+
+
+;; expand and kill region if not select region
+;; http://dev.ariel-networks.com/wp/documents/aritcles/emacs/part16
+;; List9 mod
+ (defadvice kill-region (around kill-word-or-kill-region activate)
+   (if (and (interactive-p) transient-mark-mode (not mark-active))
+       (progn (er/expand-region) (kill-region (region-beginning) (region-end)))
+     ad-do-it))
+
+(define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)

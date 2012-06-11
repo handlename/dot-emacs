@@ -31,10 +31,10 @@
 
 ;; org-capture
 (setq org-capture-templates
-      '(("T" "Todo private" entry (file+olp org-my-private-file "Todo" "Future") "** TODO %?\n   %U\n   %i\n" :unnarrowed t)
-        ("I" "Idea private" entry (file+headline org-my-private-file "Idea") "** %?\n   %T\n   %i\n" :unnarrowed t)
-        ("M" "Memo private" entry (file+headline org-my-private-file "Memo") "** %?\n   %T\n   %i\n" :unnarrowed t)
-        ("t" "Todo kayac" entry (file+olp org-my-kayac-file "Todo" "Future") "** TODO %?\n   %U\n   %i\n" :unnarrowed t)
+      '(("T" "Todo private" entry (file+olp org-my-private-file "Todo") "** TODO %?\n   %U\n   %i\n" :unnarrowed t)
+        ("I" "Idea private" entry (file+headline org-my-private-file "Idea") "** %?\n   %U\n   %i\n" :unnarrowed t)
+        ("M" "Memo private" entry (file+headline org-my-private-file "Memo") "** %?\n   %U\n   %i\n" :unnarrowed t)
+        ("t" "Todo kayac" entry (file+olp org-my-kayac-file "Todo") "** TODO %?\n   %U\n   %i\n" :unnarrowed t)
         ("i" "Idea kayac" entry (file+headline org-my-kayac-file "Idea") "** %?\n   %U\n   %i\n" :unnarrowed t)
         ("m" "Memo kayac" entry (file+headline org-my-kayac-file "Memo") "** %?\n   %U\n   %i\n" :unnarrowed t)
         ("d" "Do It Later" entry (file+headline org-my-dil-file "DIL") "** %?\n   %U\n   %i\n" :unnarrowed t)
@@ -43,7 +43,7 @@
 ;; todo
 (setq org-use-fast-todo-selection t)
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "CANCEL(c)")))
+      '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "OVER(o)" "CANCEL(c)")))
 
 ;; org-babel
 (org-babel-do-load-languages
@@ -59,3 +59,20 @@
    (ruby . t)
    (sh . t)
    (sql . t)))
+
+;; org-tree-slide
+;; INSTALL
+;; (auto-install-from-url "https://raw.github.com/takaxp/org-tree-slide/master/org-tree-slide.el")
+(require 'org-tree-slide)
+
+(when (require 'org-tree-slide nil t)
+  (org-tree-slide-presentation-profile)
+  (global-set-key (kbd "<f8>") 'org-tree-slide-mode)
+  (global-set-key (kbd "S-<f8>") 'org-tree-slide-skip-done-toggle)
+  (set-face-foreground 'org-document-title "#ffffff")
+  (set-face-background 'org-document-title "#222222")
+  (set-face-foreground 'org-document-info "#ffffff")
+  (set-face-background 'org-document-info "#222222")
+  )
+
+(load "~/dev/clone/p5-Org-To-Textile/org-to-textile.el")

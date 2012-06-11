@@ -37,3 +37,14 @@ Creates a buffer if necessary."
               (kill-buffer (current-buffer))
               (dired up))
           (dired-goto-file dir))))))
+
+;; open by related program
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (define-key dired-mode-map "z" 'dired-open-by-related)))
+
+(defun dired-open-by-related ()
+  (interactive)
+  (let ((file (dired-get-filename)))
+    (message file)
+    (start-process "open-by-related" nil "open" file)))

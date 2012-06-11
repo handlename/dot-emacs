@@ -69,9 +69,7 @@
 (require 'perl-completion)
 (add-hook 'cperl-mode-hook
           '(lambda ()
-             (setq plcmp-use-keymap nil)
-             (add-to-list 'ac-sources 'ac-source-perl-completion)
-             (perl-completion-mode t)))
+             (add-to-list 'ac-sources 'ac-source-perl-completion)))
 
 ;; for emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook

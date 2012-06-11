@@ -93,6 +93,12 @@
 ;; (install-elisp "http://coderepos.org/share/browser/lang/elisp/set-perl5lib/set-perl5lib.el?format=txt")
 (require 'set-perl5lib)
 
+;; perl-completion
+;; INSTALL
+;; (install-elisp "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
+(setq plcmp-use-keymap nil)
+(require 'perl-completion)
+
 ;; tmt-mode
 ;; for Text::MicroTemplate
 ;; INSTALL
@@ -144,7 +150,12 @@
  '(lambda ()
     (progn
       (flymake-perl-load)
-      (local-set-key (kbd "C-x m") 'perldoc-m)
+      ;; perl-completion
+      (setq plcmp-use-keymap nil)
+      (require 'perl-completion)
+      (perl-completion-mode t)
+      ;; keybindings
       (local-set-key (kbd "C-x C-e") 'perl-eval)
-      (local-set-key (kbd "C-c C-p d") 'plcmp-cmd-show-doc)
-      (local-set-key (kbd "C-c C-p D") 'plcmp-cmd-show-doc-at-point))))
+      (local-set-key (kbd "C-x m") 'plcmp-cmd-show-doc)
+      (local-set-key (kbd "C-x M") 'plcmp-cmd-show-doc-at-point)
+      )))

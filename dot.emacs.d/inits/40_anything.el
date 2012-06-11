@@ -27,6 +27,9 @@
 ;; killring history
 (define-key global-map (kbd "C-M-y") 'anything-show-kill-ring)
 
+;; imenu
+(define-key global-map (kbd "C-x i") 'anything-imenu)
+
 ;; emacs commands
 (define-key global-map (kbd "M-x")
   (lambda ()

@@ -4,7 +4,7 @@
 ;; http://d.hatena.ne.jp/Tetsujin/20070614/1181757931
 ;; modified
 (add-to-list 'align-rules-list
-             '(php-assignment
+             '(general-assignment
                (regexp   . "[^-=!^&*+<>/.| \t\n]\\(\\s-*[.-=!^&*+<>/|]*\\)=>?\\(\\s-*\\)\\([^= \t\n]\\|$\\)")
                (justify  . t)
                (tab-stop . nil)

@@ -12,3 +12,5 @@ dot.emacs.d/shellenv.el
 dot.emacs.d/site-lisp
 dot.emacs.d/tags
 dot.emacs.d/tramp
+dot.emacs.d/url
+dot.emacs.d/vendor

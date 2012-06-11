@@ -1,0 +1,7 @@
+# -*- snippet -*-
+#name : -(void)initialize { ... }
+# --
+-(void)initialize {
+    [super initialize];
+    $0
+}

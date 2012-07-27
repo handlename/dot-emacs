@@ -63,3 +63,19 @@
 (require 'expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (transient-mark-mode t)
+
+;; auto indentation on yank
+;; http://www.emacswiki.org/emacs/AutoIndentation
+(dolist (command '(yank yank-pop))
+  (eval `(defadvice ,command (after indent-region activate)
+           (and (not current-prefix-arg)
+                (member major-mode '(emacs-lisp-mode lisp-mode
+                                                     clojure-mode    scheme-mode
+                                                     perl-mode       cperl-mode
+                                                     ruby-mode       php-mode
+                                                     rspec-mode      python-mode
+                                                     c-mode          c++-mode
+                                                     objc-mode       latex-mode
+                                                     plain-tex-mode))
+                (let ((mark-even-if-inactive transient-mark-mode))
+                  (indent-region (region-beginning) (region-end) nil))))))

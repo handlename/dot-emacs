@@ -1,8 +1,7 @@
 ;; js2-mode
 ;; ORIGINAL: http://code.google.com/p/js2-mode
 ;; FORKED: https://github.com/mooz/js2-mode
-;; INSTALL:
-;; git clone https://github.com/mooz/js2-mode.git
+;; installed by package.el
 
 ;; js2-highlight-vars-mode
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode

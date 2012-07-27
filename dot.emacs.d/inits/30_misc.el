@@ -59,7 +59,7 @@
                  sh-mode)))
 
 ;; expand-region
-;; https://github.com/magnars/expand-region.el
+;; installed by package.el
 (require 'expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)
 (transient-mark-mode t)

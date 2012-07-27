@@ -1,3 +1,5 @@
+;; installed by package.el
+
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)
 

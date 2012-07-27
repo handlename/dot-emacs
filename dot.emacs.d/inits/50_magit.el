@@ -1,3 +1,5 @@
+;; installed by package.el
+
 (require 'magit)
 
 (set-face-foreground 'magit-diff-add "#00ff00")

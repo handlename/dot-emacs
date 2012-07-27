@@ -53,6 +53,7 @@
         ruby-mode
         scala-mode
         sh-mode
+        textile-mode
         tmt-mode
         xml-mode
         yaml-mode))

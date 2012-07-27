@@ -20,7 +20,8 @@
                 objc-mode-hook
                 php-mode-hook
                 perl-mode-hook
-                ruby-mode-hook))
+                ruby-mode-hook
+                scala-mode-hook))
   (add-hook mode 'my-smartchr-setting))
 
 (add-hook 'objc-mode-hook

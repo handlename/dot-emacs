@@ -10,6 +10,7 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp/html-helper-mode")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/js-doc")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/riece/lisp")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/rsence")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yasnippet")
 (add-to-list 'load-path "~/.emacs.d/site-lisp/yatex/")
 

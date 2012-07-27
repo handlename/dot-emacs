@@ -49,6 +49,13 @@
                       anything-c-source-etags-select))
       "Find Tag: " nil)))
 
+;; bookmark
+(define-key global-map (kbd "C-x r l")
+  (lambda ()
+    "List bookmarks in anything"
+    (interactive)
+    (anything '(anything-c-source-bookmarks))))
+
 ;; anything-project
 ;; INSTALL
 ;; (install-elisp "https://github.com/imakado/anything-project/raw/master/anything-project.el")

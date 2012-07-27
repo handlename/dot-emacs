@@ -5,3 +5,7 @@
 
 use strict;
 use warnings;
+
+use App::Options(
+);
+my $options = { %App::options };

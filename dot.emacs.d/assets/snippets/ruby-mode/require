@@ -1,0 +1,4 @@
+# -*- snippet -*-
+# name: require '...'
+# --
+require '$0'

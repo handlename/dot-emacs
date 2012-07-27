@@ -1,0 +1,6 @@
+# -*- snippet -*-
+# name: times do |i| ... end
+# --
+times do ${1:|${2:i}|}
+    $0
+end

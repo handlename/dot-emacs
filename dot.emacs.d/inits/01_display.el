@@ -10,13 +10,14 @@
         (set-frame-font "Migu-1M-12")
         (set-fontset-font (frame-parameter nil 'font)
                           'japanese-jisx0208
-                          (font-spec :family "Migu 1M" :size 14))
+                          (font-spec :family "Migu 1M") nil 'append)
         (set-fontset-font (frame-parameter nil 'font)
                           'japanese-jisx0212
-                          (font-spec :family "Migu 1M" :size 14))
+                          (font-spec :family "Migu 1M") nil 'append)
         (set-fontset-font (frame-parameter nil 'font)
                           'katakana-jisx0201
-                          (font-spec :family "Migu 1M" :size 14)))
+                          (font-spec :family "Migu 1M") nil 'append)
+        (setq face-font-rescale-alist '(("Migu.*" . 1.2))))
       (setq ns-pop-up-frames nil)))
 
 ;; color settings

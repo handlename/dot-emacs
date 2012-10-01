@@ -1,4 +1,0 @@
-# name : ${n:$(...)} mirror
-# key : $m
-# --
-\${${2:n}:${4:\$(${5:reflection-fn})}\}$0

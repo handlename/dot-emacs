@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name : forin (key in object) { ... }
-# --
-<% for ($1 in $2) { %>
-$0
-<% } %>

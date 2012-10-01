@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: [% FOR ... IN ... %] ... [% END %]
-# --
-[% FOR $1 IN $2 %]
-
-$0
-
-[% END %]

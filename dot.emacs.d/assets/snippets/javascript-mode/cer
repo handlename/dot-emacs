@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-# name: console.error(...)
-# --
-console.error($0);

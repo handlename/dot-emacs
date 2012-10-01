@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: else if (...) { ... }
-# --
-else if ($1) {
-   $0
-}

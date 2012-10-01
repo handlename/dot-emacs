@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-#name : @synthesize hoge = hoge_;
-#key  : @synthesize
-# --
-@synthesize $1 = $1_;

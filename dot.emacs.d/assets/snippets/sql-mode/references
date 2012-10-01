@@ -1,3 +1,0 @@
-#name : REFERENCES ...
-# --
-REFERENCES ${1:TableName}([${2:ColumnName}])

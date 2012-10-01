@@ -1,8 +1,0 @@
-# -*- snippet -*-
-#name : Initialize implementation file for controller.
-# --
-#import "$1Controller.h"
-
-@implementation $1Controller
-$0
-@end

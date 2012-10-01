@@ -1,8 +1,0 @@
-# -*- snippet -*-
-# name : given (...) { when {...} ... }
-# --
-given ($1) {
-    when ($2) {
-        $0
-    }
-}

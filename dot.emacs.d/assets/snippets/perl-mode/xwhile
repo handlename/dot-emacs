@@ -1,3 +1,0 @@
-#name : ... while ...
-# --
-${1:expression} while ${0:condition};

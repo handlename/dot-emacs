@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-# name: removeEventListener(type, handler, capture)
-# --
-removeEventListener(${1:type}, ${2:handler}, ${0:capture})

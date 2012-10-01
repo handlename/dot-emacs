@@ -1,3 +1,0 @@
-#name : <meta http-equiv="..." content="..." />
-# --
-<meta http-equiv="${1:Content-Type}" content="${2:text/html; charset=UTF-8}" />

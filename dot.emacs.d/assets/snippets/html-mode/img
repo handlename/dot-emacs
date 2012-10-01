@@ -1,3 +1,0 @@
-#name : <img src="..." width="..." hegiht="..." class="..." alt="..." />
-# --
-<img src="$1" width="$2" height="$3"${4: class="$5"}${6: alt="$7"} />$0

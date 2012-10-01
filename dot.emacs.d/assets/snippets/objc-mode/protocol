@@ -1,7 +1,0 @@
-# -*- snippet -*-
-#name : @protocol ... @end
-#key  : @protocol
-# --
-@protocol $1
-$0
-@end

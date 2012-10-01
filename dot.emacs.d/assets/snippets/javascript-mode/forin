@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: for (... in ...) { ... }
-# --
-for (${1:key} in ${2:object}) {
-   $0
-}

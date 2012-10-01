@@ -1,3 +1,0 @@
-#name : Referenced Image
-# --
-![${1:Alt Text}][$2] $0

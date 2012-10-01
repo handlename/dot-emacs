@@ -1,3 +1,0 @@
-#name : grab buffer substring
-# --
-(setq $0 (buffer-substring-no-properties myStartPos myEndPos))

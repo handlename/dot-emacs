@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: document comment
-# --
-/**
- * $1
- * @return $2
- */

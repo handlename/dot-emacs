@@ -1,3 +1,0 @@
-#name : ... if ...
-# --
-${1:expression} if ${0:condition}

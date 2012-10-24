@@ -1,4 +1,5 @@
 *~
+*.elc
 .ap-project-files
 dot.emacs.d/ac-comphist.dat
 dot.emacs.d/anything-c-adaptive-history

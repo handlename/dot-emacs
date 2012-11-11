@@ -45,3 +45,10 @@
                (regexp . "\\(\\s-*\\)# => [^#\t\n]")
                (repeat . nil)
                (modes  . '(ruby-mode))))
+
+;; for scala-mode
+(add-to-list 'align-rules-list
+             '(scala-assignment-literal
+               (regexp . "\\(\\s-*\\):?=\\s-*[^// \t\n]")
+               (repeat . t)
+               (modes  . '(scala-mode))))

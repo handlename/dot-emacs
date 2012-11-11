@@ -14,6 +14,7 @@
 
 (dolist (mode '(c-mode-hook
                 cperl-mode-hook
+                coffee-mode-hook
                 emacs-lisp-mode-hook
                 javascript-mode-hook
                 js2-mode-hook

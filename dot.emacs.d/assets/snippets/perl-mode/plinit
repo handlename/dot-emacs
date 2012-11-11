@@ -5,7 +5,11 @@
 
 use strict;
 use warnings;
+use feature 'say';
 
-use App::Options(
+${1:use App::Options(
+    option => {
+        $0
+    },
 );
-my $options = { %App::options };
+my %opts = %App::options;}

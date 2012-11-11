@@ -14,6 +14,9 @@
 (require 'color-moccur)
 (require 'anything-c-moccur)
 (setq moccur-split-word t)
+(defadvice moccur-edit-change-file
+  (after save-after-moccur-edit-buffer activate)
+  (save-buffer))
 (setq anything-c-moccur-anything-idle-delay 0.2
       anything-c-moccur-enable-initial-pattern nil
       anything-c-moccur-higligt-info-line-flag t

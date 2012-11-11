@@ -1,12 +1,15 @@
-;; INSTALL
+;; INSTALL from package el
 ;; (install-elisp "https://raw.github.com/m2ym/popwin-el/master/popwin.el")
-(when (< emacs-major-version 24)
-  (if (require 'popwin nil t)
-      (progn
-        (setq display-buffer-function 'popwin:display-buffer)
-        (setq popwin:popup-window-height 0.3)
-        (setq anything-samewindow nil)
-        (push '("\\*anything-?" :regexp t) popwin:special-display-config)
-        (push '("\\*[Vv][Cc]" :regexp t) popwin:special-display-config)
-        (push '("\\*git-" :regexp t) popwin:special-display-config)
-        (push '("*image-dired*") popwin:special-display-config))))
+
+(require 'popwin)
+
+(setq display-buffer-function 'popwin:display-buffer)
+
+(setq special-display-function 'popwin:special-display-popup-window)
+(setq special-display-regexps '("\\.po"
+                                "\\*auto-async-byte-compile\\*"
+                                "\\*blockdiag\\*"
+                                "\\*compilation\\*"))
+
+(setq popwin:popup-window-height 0.33)
+(setq popwin:popup-window-width 0.33)

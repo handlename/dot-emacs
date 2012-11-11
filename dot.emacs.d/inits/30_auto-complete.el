@@ -25,7 +25,6 @@
 (require 'auto-complete-clang)
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/assets/ac-dict")
-(global-set-key (kbd "M-_") 'auto-complete)
 (setq ac-auto-start 1)
 (setq ac-auto-show-menu 0.2)
 
@@ -33,6 +32,7 @@
       '(c++-mode
         c-mode
         cc-mode
+        coffee-mode
         cperl-mode
         css-mode
         ecmascript-mode
@@ -66,8 +66,8 @@
 (global-auto-complete-mode t)
 
 ;; for cperl-mode
-(setq plcmp-use-keymap nil)
 (require 'perl-completion)
+(setq plcmp-use-keymap nil)
 (add-hook 'cperl-mode-hook
           '(lambda ()
              (add-to-list 'ac-sources 'ac-source-perl-completion)))
@@ -92,3 +92,8 @@
 (add-hook 'ruby-mode-hook
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-rsense)))
+
+;; keybindings
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "C-s") 'ac-isearch)

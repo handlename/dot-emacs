@@ -1,0 +1,4 @@
+# -*- snippet -*-
+# name : use Carp::REPL qw/repl/; repl();
+# --
+use Carp::REPL qw/repl/; repl();

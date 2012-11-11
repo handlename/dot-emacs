@@ -39,3 +39,6 @@
      ad-do-it))
 
 (define-key minibuffer-local-completion-map (kbd "C-w") 'backward-kill-word)
+
+;; np
+(require 'np)

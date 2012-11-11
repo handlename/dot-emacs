@@ -79,3 +79,21 @@
                                                      plain-tex-mode))
                 (let ((mark-even-if-inactive transient-mark-mode))
                   (indent-region (region-beginning) (region-end) nil))))))
+
+;; inatial-scroll
+;; (install-elisp "http://github.com/kiwanami/emacs-inertial-scroll/raw/master/inertial-scroll.el")
+(require 'inertial-scroll)
+(setq inertias-global-minor-mode-map
+      (inertias-define-keymap
+       '(
+         ("<next>"  . inertias-up)
+         ("<prior>" . inertias-down)
+         ("C-v"     . inertias-up)
+         ("M-v"     . inertias-down)
+         ) inertias-prefix-key))
+(inertias-global-minor-mode 1)
+
+(setq inertias-initial-velocity 100)
+(setq inertias-friction 200)
+(setq inertias-rest-coef 0)
+(setq inertias-update-time 30)

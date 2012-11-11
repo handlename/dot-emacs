@@ -1,4 +1,4 @@
-(require 'org-install)
+;(require 'org)
 
 (setq org-log-done t)
 (setq org-tags-column 72)
@@ -73,6 +73,7 @@
   (set-face-background 'org-document-title "#222222")
   (set-face-foreground 'org-document-info "#ffffff")
   (set-face-background 'org-document-info "#222222")
+  (setq org-tree-slide-slide-in-brank-lines 0)
   )
 
 (load "~/dev/clone/p5-Org-To-Textile/org-to-textile.el")

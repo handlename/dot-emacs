@@ -1,6 +1,7 @@
 (global-set-key (kbd "C-c a")     'align)
 (global-set-key (kbd "C-c M-a")   'align-regexp)
 (global-set-key (kbd "C-h")       'backward-delete-char)
+(global-set-key (kbd "C-S-m")     'comment-indent-new-line)
 (global-set-key (kbd "C-x f")     'fill-paragraph)
 (global-set-key (kbd "C-x M-f")   'fill-region)
 (global-set-key (kbd "M-g")       'goto-line)

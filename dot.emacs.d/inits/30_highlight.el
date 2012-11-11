@@ -11,7 +11,7 @@
 (show-paren-mode 1)
 
 ;; highlight reagion
-(setq transient-mark-mode t)
+(setq transient-mark-mode nil)
 
 ;; highlight edit characters
 (require 'jaspace)

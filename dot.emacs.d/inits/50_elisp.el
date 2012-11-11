@@ -14,3 +14,21 @@
 ;; INSTALL
 ;; (install-elisp-from-emacswiki "lispxmp.el")
 (require 'lispxmp)
+
+;; auto-async-byte-compile
+;; INSTALL (install-elisp "http://www.emacswiki.org/emacs/download/auto-async-byte-compile.el")
+(require 'auto-async-byte-compile)
+(add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
+(setq auto-async-byte-compile-exclude-files-regexp "/junk")
+
+;; paredit-mode
+(require 'paredit)
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
+
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (progn
+              (local-set-key (kbd "C-c C-c") 'lispxmp)
+              (local-set-key (kbd "C-)") 'paredit-forward-slurp-sexp)
+              (local-set-key (kbd "C-(") 'paredit-forward-barf-sexp))))

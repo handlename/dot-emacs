@@ -9,6 +9,7 @@
 (setq cperl-close-paren-offset -4)
 (setq cperl-indent-region-fix-constructs t)
 (setq cperl-indent-parens-as-block t)
+(setq cperl-indent-subs-specially nil)
 (setq cperl-comment-column 40)
 
 (add-to-list 'auto-mode-alist '("\\.pl$" . cperl-mode))

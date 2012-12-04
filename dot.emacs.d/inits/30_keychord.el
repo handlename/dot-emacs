@@ -11,3 +11,4 @@
 (key-chord-define-global "gp" 'whitespace-cleanup)
 (key-chord-define-global "k." 'align)
 (key-chord-define-global "r," 'delete-horizontal-space)
+

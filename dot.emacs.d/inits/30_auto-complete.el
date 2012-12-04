@@ -21,7 +21,7 @@
 
 ;; auto-complete-clang
 ;; INSTALL
-;; (install-elisp "https://raw.github.com/brianjcj/auto-complete-clang/master/auto-complete-clang.el")
+;; (package-install 'auto-complete-clang)
 (require 'auto-complete-clang)
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/assets/ac-dict")
@@ -94,6 +94,6 @@
             (add-to-list 'ac-sources 'ac-source-rsense)))
 
 ;; keybindings
-(define-key ac-completing-map (kbd "C-n") 'ac-next)
-(define-key ac-completing-map (kbd "C-p") 'ac-previous)
-(define-key ac-completing-map (kbd "C-s") 'ac-isearch)
+(define-key ac-completing-map (kbd "M-n") 'ac-next)
+(define-key ac-completing-map (kbd "M-p") 'ac-previous)
+(define-key ac-completing-map (kbd "M-s") 'ac-isearch)

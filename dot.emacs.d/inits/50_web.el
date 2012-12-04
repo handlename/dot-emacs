@@ -1,8 +1,8 @@
 ;; INSTALL by package.el
 
 (require 'web-mode)
-(require 'tt)
-(require 'xslate)
+;; (require 'tt)
+;; (require 'xslate)
 
 (add-to-list 'auto-mode-alist '("\\.html"  . web-mode))
 (add-to-list 'auto-mode-alist '("\\.t[tx]" . web-mode))
@@ -25,8 +25,9 @@
           '(lambda ()
              (zencoding-mode t)
              (local-set-key (kbd "C-c C-c") 'zencoding-expand-line)
-             (cond
-              ((extension-match "tx")
-               (xslate-mode t))
-              ((extension-match "tt")
-               (tt-mode t)))))
+             ;; (cond
+             ;;  ((extension-match "tx")
+             ;;   (xslate-mode t))
+             ;;  ((extension-match "tt")
+             ;;   (tt-mode t)))
+             ))

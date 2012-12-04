@@ -1,9 +1,9 @@
 (require 'flymake)
 
 ;; keybindings
-(global-set-key "\M-p" 'flymake-goto-prev-error)
-(global-set-key "\M-n" 'flymake-goto-next-error)
-(global-set-key "\C-cd" 'flymake-popup-err-message)
+(global-set-key (kbd "M-p")   'flymake-goto-prev-error)
+(global-set-key (kbd "M-n")   'flymake-goto-next-error)
+(global-set-key (kbd "C-x d") 'flymake-popup-err-message)
 
 ;; popup error message
 (defun flymake-popup-err-message ()

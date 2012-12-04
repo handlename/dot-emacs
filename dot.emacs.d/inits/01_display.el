@@ -25,8 +25,8 @@
 (set-background-color                                     "#222222")
 (set-cursor-color                                         "#FF0000")
 (set-face-background 'region                              "#222244")
-(set-face-foreground 'modeline                            "#CCCCCC")
-(set-face-background 'modeline                            "#222222")
+(set-face-foreground 'mode-line                           "#CCCCCC")
+(set-face-background 'mode-line                           "#222222")
 (set-face-foreground 'mode-line-inactive                  "#222222")
 (set-face-background 'mode-line-inactive                  "#CCCCCC")
 (set-face-foreground 'font-lock-comment-delimiter-face    "#888888")
@@ -41,3 +41,5 @@
 (set-face-foreground 'font-lock-type-face                 "#FFFF7F")
 (set-face-foreground 'fringe                              "#666666")
 (set-face-background 'fringe                              "#282828")
+
+(dolist (font (font-family-list)) (print font))

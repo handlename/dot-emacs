@@ -1,6 +1,7 @@
 *~
 *.elc
 .ap-project-files
+dot.emacs.d/.mc-lists.el
 dot.emacs.d/ac-comphist.dat
 dot.emacs.d/anything-c-adaptive-history
 dot.emacs.d/auto-install
@@ -9,9 +10,9 @@ dot.emacs.d/bin
 dot.emacs.d/bookmarks
 dot.emacs.d/eshell
 dot.emacs.d/inits/00_private.el
+dot.emacs.d/packages
 dot.emacs.d/shellenv.el
 dot.emacs.d/site-lisp
 dot.emacs.d/tags
 dot.emacs.d/tramp
 dot.emacs.d/url
-dot.emacs.d/vendor

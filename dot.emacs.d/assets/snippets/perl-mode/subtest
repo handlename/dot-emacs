@@ -1,0 +1,6 @@
+# -*- snippet -*-
+# name : subtest '...' => sub { ... };
+# --
+subtest '$1' => sub {
+    $0
+};

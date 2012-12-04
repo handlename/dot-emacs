@@ -1,3 +1,5 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp/wrap-region")
+;; INSTALL
+;; (package-install "wrap-region")
+
 (require 'wrap-region)
 (wrap-region-mode t)

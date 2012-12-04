@@ -97,3 +97,8 @@
 (setq inertias-friction 200)
 (setq inertias-rest-coef 0)
 (setq inertias-update-time 30)
+
+;; INSTALL: (package-install 'multiple-cursors)
+(require 'multiple-cursors)
+(global-set-key (kbd "M->") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-<") 'mc/mark-previous-like-this)

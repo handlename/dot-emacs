@@ -2,9 +2,9 @@
 ;; https://gist.github.com/672655
 (autoload 'html-helper-mode "html-helper-mode" "Yay HTML" t)
 
-(setq auto-mode-alist (cons '("\\.html$" . html-helper-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.ejs$" . html-helper-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.tx$" . html-helper-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.html$" . html-helper-mode))
+(add-to-list 'auto-mode-alist '("\\.ejs$" . html-helper-mode))
+(add-to-list 'auto-mode-alist '("\\.tx$" . html-helper-mode))
 
 (setq html-helper-basic-offset 4)
 (setq html-helper-item-continue-indent 0)

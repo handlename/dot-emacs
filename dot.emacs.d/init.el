@@ -10,7 +10,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-load-path "site-lisp" "auto-install" "vendor/elpa")
+(add-to-load-path "site-lisp" "auto-install" "packages")
 
 (require 'init-loader)
 

@@ -1,0 +1,4 @@
+# -*- snippet -*-
+# name : cluck
+# --
+use Carp qw/cluck/; cluck;

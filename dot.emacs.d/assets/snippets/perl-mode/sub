@@ -1,6 +1,7 @@
-#name : sub ... { ... }
+# -*- snippet -*-
+# name : sub ... { ... }
 # --
 sub ${1:function_name} {
-    my ($2) = @_;
-    $0
+    ${2:my ($3) = @_;
+}$0
 }

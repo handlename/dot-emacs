@@ -1,4 +1,5 @@
-#name : else { ... }
+# -*- snippet -*-
+# name : else { ... }
 # --
 else {
     $0

@@ -1,0 +1,21 @@
+# -*- snippet -*-
+# name : test template for Nakamap
+# --
+use Nakamap::Test;
+use Test::More;
+
+use HTTP::Request::Common;
+
+use Nakamap::Models qw/M/;
+
+init_table_all();
+
+my $conf = M('conf');
+
+${1:test_api sub {
+    my ($cb) = @_;
+
+    my $base_uri = URI->new(  );
+};}
+$0
+done_testing;

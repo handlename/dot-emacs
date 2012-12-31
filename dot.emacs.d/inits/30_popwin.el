@@ -8,7 +8,8 @@
                                 "\\*auto-async-byte-compile\\*"
                                 "\\*blockdiag\\*"
                                 "\\*compilation\\*"
-                                "\\*BackTrace\\*"))
+                                "\\*BackTrace\\*"
+                                "\\*quickrun\\*"))
 
 (setq popwin:popup-window-height 0.33)
 (setq popwin:popup-window-width  0.33)

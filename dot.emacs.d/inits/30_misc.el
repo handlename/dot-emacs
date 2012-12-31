@@ -93,8 +93,8 @@
          ) inertias-prefix-key))
 (inertias-global-minor-mode 1)
 
-(setq inertias-initial-velocity 100)
-(setq inertias-friction 200)
+(setq inertias-initial-velocity 200)
+(setq inertias-friction 1000)
 (setq inertias-rest-coef 0)
 (setq inertias-update-time 30)
 

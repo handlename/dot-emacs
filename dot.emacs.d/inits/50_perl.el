@@ -17,18 +17,10 @@
 (add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 
-;; use perl installed by perlbrew
-;; http://d.hatena.ne.jp/kiririmode/20100925/p1
-;; http://gugod.org/2010/05/perlbrew-path-in-emacsapp.html
-(load "cl-seq")
-; Prepend perlbrew paths to exec-path
-(mapc (lambda (x) (add-to-list 'exec-path x))
-      (mapcar 'expand-file-name
-              (list "~/perl5/perlbrew/bin" "~/perl5/perlbrew/perls/current/bin")))
-; set PATH to be the same as exec-path, clobber the old PATH value.
-(setenv "PATH"
-        (reduce (lambda (a b) (concatenate 'string a ":" b))
-                exec-path))
+;; perlbrew.el
+;; INSTALL: (install-elisp "https://raw.github.com/kentaro/perlbrew.el/master/perlbrew.el")
+(require 'perlbrew)
+(perlbrew-use "5.12.4")
 
 (defun perldoc-m ()
   (interactive)

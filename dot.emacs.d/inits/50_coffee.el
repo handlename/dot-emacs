@@ -4,7 +4,7 @@
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
-(setq coffee-command "coffee -b")
+(setq coffee-command "coffee")
 (setq coffee-compile-jump-to-error nil)
 (add-hook 'coffee-mode-hook
           '(lambda ()

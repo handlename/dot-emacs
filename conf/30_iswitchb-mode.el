@@ -14,6 +14,7 @@
        "*init log*"
        "*Completions*"
        "*Messages*"
+       "*Completions*"
         ))
 
 ;;;選択している buffer を window に表示してみる

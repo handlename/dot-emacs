@@ -37,6 +37,7 @@
         css-mode
         ecmascript-mode
         emacs-lisp-mode
+        html-mode
         html-helper-mode
         java-mode
         javascript-mode

@@ -6,8 +6,8 @@
 (setq cperl-indent-parens-as-block t)
 (setq cperl-close-paren-offset -4)
 (setq cperl-tab-always-indent t)
-;(setq cperl-electric-parens t) ; 対応する括弧自動挿入 うざい
-;(setq cperl-invalid-face nil)
+(setq cperl-electric-parens t) ; 対応する括弧自動挿入 うざい
+(setq cperl-invalid-face nil)
 (setq cperl-highlight-variables-indiscriminately t)
 
 ; steal from perlhacks

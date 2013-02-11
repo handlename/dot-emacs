@@ -55,6 +55,7 @@
         sh-mode
         textile-mode
         tmt-mode
+        web-mode
         xml-mode
         yaml-mode))
 

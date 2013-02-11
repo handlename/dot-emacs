@@ -41,5 +41,3 @@
 (set-face-foreground 'font-lock-type-face                 "#FFFF7F")
 (set-face-foreground 'fringe                              "#666666")
 (set-face-background 'fringe                              "#282828")
-
-(dolist (font (font-family-list)) (print font))

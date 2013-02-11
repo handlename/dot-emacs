@@ -7,5 +7,3 @@
 ;;(add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa"))
 (setq package-user-dir (concat user-emacs-directory "packages"))
 (package-initialize)
-
-(load "/usr/local/Cellar/emacs/24.2/share/emacs/24.2/lisp/gnus/mailcap.elc")

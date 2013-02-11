@@ -17,11 +17,6 @@
 (add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
 
-;; perlbrew.el
-;; INSTALL: (install-elisp "https://raw.github.com/kentaro/perlbrew.el/master/perlbrew.el")
-(require 'perlbrew)
-(perlbrew-use "5.12.4")
-
 (defun perldoc-m ()
   (interactive)
   (let ((module (thing-at-point 'perl-module-thing))

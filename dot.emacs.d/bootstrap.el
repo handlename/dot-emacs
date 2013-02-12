@@ -58,7 +58,6 @@
         rst-mode
         scala-mode
         sequential-command
-        sequential-command-config
         set-perl5lib
         shadow
         smartchr

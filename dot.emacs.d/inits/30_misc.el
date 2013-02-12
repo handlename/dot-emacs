@@ -14,12 +14,13 @@
     (keyboard-quit)))
 
 ;; sequential-command
-(require 'sequential-command-config)
+(require 'sequential-command)
 (define-sequential-command seq-home
   back-to-indentation beginning-of-line beginning-of-buffer seq-return)
 (define-sequential-command seq-end
   end-of-line end-of-buffer seq-return)
-(sequential-command-setup-keys)
+(global-set-key (kbd "C-a") 'seq-home)
+(global-set-key (kbd "C-e") 'seq-end)
 
 ;; uniquify
 (require 'uniquify)

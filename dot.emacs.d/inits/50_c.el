@@ -16,9 +16,6 @@
              (flymake-mode t)))
 
 ;; c-eldoc
-;; INSTALL
-;; (install-elisp "http://www.emacswiki.org/emacs/download/c-eldoc.el")
-;; (install-elisp "http://cc-mode.sourceforge.net/src/cc-defs.el")
 (load "c-eldoc")
 
 (add-hook 'c-mode-hook

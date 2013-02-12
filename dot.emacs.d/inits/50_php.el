@@ -1,5 +1,3 @@
-;; INSTALL
-;; (install-elisp-from-emacswiki "php-mode-improved.el")
 (autoload 'php-mode "php-mode")
 (require 'php-mode)
 (setq php-mode-force-pear t)

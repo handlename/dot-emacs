@@ -1,0 +1,5 @@
+(:name js-doc
+       :type github
+       :pkgname "mooz/js-doc"
+       :features "js-doc")
+

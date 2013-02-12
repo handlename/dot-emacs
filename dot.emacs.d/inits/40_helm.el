@@ -1,7 +1,3 @@
-;; INSTALL (package-install 'helm)
-;; INSTALL (package-install 'helm-c-moccur)
-;; INSTALL (install-elisp "https://raw.github.com/gist/3770783/b9e76cf3e4cc9d6eef35fb987dbf2f7a6dd8d8ca/helm-ack.el")
-
 ;; To avoid these warnings:
 ;;   ad-handle-definition: `ibuffer-do-occur' got redefined
 ;;   ad-handle-definition: `ibuffer-do-occur' got redefined
@@ -15,16 +11,48 @@
 
 (require 'helm-config)
 (require 'helm-c-moccur)
-(require 'helm-git)
-(require 'helm-ack)
 
 ;; max width of buffer name in buffer list
-(setq helm-buffer-max-length 50)
+(defvar helm-buffer-max-length 50)
 
+;; helm-git-project
+(defun helm-c-sources-git-project-for (pwd)
+  (loop for elt in
+        '(("Modified files" . "--modified")
+          ("Untracked files" . "--others --exclude-standard")
+          ("All controlled files in this project" . nil))
+        for title  = (format "%s (%s)" (car elt) pwd)
+        for option = (cdr elt)
+        for cmd    = (format "git ls-files %s" (or option ""))
+        collect
+        `((name . ,title)
+          (init . (lambda ()
+                    (unless (and (not ,option) (helm-candidate-buffer))
+                      (with-current-buffer (helm-candidate-buffer 'global)
+                        (call-process-shell-command ,cmd nil t nil)))))
+          (candidates-in-buffer)
+          (type . file))))
+
+(defun helm-git-project-topdir ()
+  (file-name-as-directory
+   (replace-regexp-in-string
+    "\n" ""
+    (shell-command-to-string "git rev-parse --show-toplevel"))))
+
+(defun helm-git-project ()
+  (interactive)
+  (let ((topdir (helm-git-project-topdir)))
+    (unless (file-directory-p topdir)
+      (error "I'm not in Git Repository!!"))
+    (let* ((default-directory topdir)
+           (sources (helm-c-sources-git-project-for default-directory)))
+      (helm-other-buffer sources "*helm git project*"))))
+
+;; keybindings
 (define-key global-map (kbd "C-M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-s")   'helm-c-moccur-occur-by-moccur)
 (define-key global-map (kbd "C-x A") 'helm-ack)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
-(define-key global-map (kbd "C-x g") 'helm-git-find-files)
+(define-key global-map (kbd "C-x g") 'helm-git-project)
 (define-key global-map (kbd "C-x i") 'helm-imenu)
 (define-key global-map (kbd "M-x")   'helm-M-x)

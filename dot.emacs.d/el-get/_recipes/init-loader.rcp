@@ -1,0 +1,4 @@
+(:name init-loader
+       :type http
+       :url "http://coderepos.org/share/export/39209/lang/elisp/init-loader/init-loader.el"
+       :features init-loader)

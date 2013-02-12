@@ -1,46 +1,18 @@
-;; INSTALL
-;; (auto-install-from-emacswiki "cperl-mode")
-
 (defalias 'perl-mode 'cperl-mode)
 
 ;; Indent
-(setq cperl-indent-level 4)
-(setq cperl-continued-statement-offset 4)
-(setq cperl-close-paren-offset -4)
-(setq cperl-indent-region-fix-constructs t)
-(setq cperl-indent-parens-as-block t)
-(setq cperl-indent-subs-specially nil)
-(setq cperl-comment-column 40)
+(defvar cperl-indent-level 4)
+(defvar cperl-continued-statement-offset 4)
+(defvar cperl-close-paren-offset -4)
+(defvar cperl-indent-region-fix-constructs t)
+(defvar cperl-indent-parens-as-block t)
+(defvar cperl-indent-subs-specially nil)
+(defvar cperl-comment-column 40)
 
 (add-to-list 'auto-mode-alist '("\\.pl$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.pm$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.psgi$" . cperl-mode))
-
-(defun perldoc-m ()
-  (interactive)
-  (let ((module (thing-at-point 'perl-module-thing))
-        (pop-up-windows t)
-        (cperl-mode-hook nil))
-    (when (string= module "")
-      (setq module (read-string "Module Name: ")))
-    (let ((result (substring (shell-command-to-string (concat "perldoc -m " module)) 0 -1))
-          (buffer (get-buffer-create (concat "*Perl " module "*")))
-          (pop-or-set-flag (string-match "*Perl " (buffer-name))))
-      (if (string-match "No module found for" result)
-          (message "%s" result)
-        (progn
-          (with-current-buffer buffer
-            (toggle-read-only -1)
-            (erase-buffer)
-            (insert result)
-            (goto-char (point-min))
-            (cperl-mode)
-            (toggle-read-only 1)
-            )
-          (if pop-or-set-flag
-              (switch-to-buffer buffer)
-            (display-buffer buffer)))))))
 
 ;; code format
 ;; http://d.hatena.ne.jp/hakutoitoi/20090208/1234069614
@@ -63,8 +35,6 @@
                   (perltidy-region)))
 
 ;; pod-mode
-;; INSTALL
-;; (install-elisp "http://github.com/renormalist/emacs-pod-mode/raw/master/pod-mode.el")
 (require 'pod-mode)
 (add-to-list 'auto-mode-alist '("\\.pod$" . pod-mode))
 (add-hook 'pod-mode-hook
@@ -77,20 +47,10 @@
                )))
 
 ;; set-perl5lib
-;; INSTALL
-;; (install-elisp "http://coderepos.org/share/browser/lang/elisp/set-perl5lib/set-perl5lib.el?format=txt")
 (require 'set-perl5lib)
-
-;; perl-completion
-;; INSTALL
-;; (install-elisp "https://raw.github.com/imakado/perl-completion/master/perl-completion.el")
-(setq plcmp-use-keymap nil)
-(require 'perl-completion)
 
 ;; tmt-mode
 ;; for Text::MicroTemplate
-;; INSTALL
-;; (install-elisp "https://github.com/yoshiki/tmt-mode/raw/master/tmt-mode.el")
 (autoload 'tmt-mode "tmt-mode"
   "Major mode for editing Text::MicroTemplate syntax")
 (add-to-list 'auto-mode-alist '("\\.mt$" . tmt-mode))
@@ -140,10 +100,7 @@
       (flymake-perl-load)
       ;; perl-completion
       (setq plcmp-use-keymap nil)
-      (require 'perl-completion)
-      (perl-completion-mode t)
       ;; keybindings
       (local-set-key (kbd "C-x C-e") 'perl-eval)
       (local-set-key (kbd "C-x m") 'plcmp-cmd-show-doc)
-      (local-set-key (kbd "C-x M") 'plcmp-cmd-show-doc-at-point)
-      )))
+      (local-set-key (kbd "C-x M") 'plcmp-cmd-show-doc-at-point))))

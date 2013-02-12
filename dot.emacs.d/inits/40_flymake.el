@@ -24,8 +24,6 @@
 (set-face-underline 'flymake-warnline "#ffff00")
 
 ;; display error message
-;; INSTALL
-;; (install-elisp "http://nschum.de/src/emacs/fringe-helper/fringe-helper.el")
 (require 'fringe-helper)
 
 (defvar flymake-fringe-overlays nil)

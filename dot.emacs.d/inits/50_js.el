@@ -1,12 +1,9 @@
 ;; js2-mode
 ;; ORIGINAL: http://code.google.com/p/js2-mode
 ;; FORKED: https://github.com/mooz/js2-mode
-;; installed by package.el
 
 ;; js2-highlight-vars-mode
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode
-;; INSTALL:
-;; (install-elisp "http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode/js2-highlight-vars.el")
 
 (custom-set-variables
  '(js2-rebind-eol-bol-keys nil))
@@ -41,8 +38,6 @@
              (local-set-key (kbd "@") 'js-doc-insert-tag)))
 
 ;; moz-repl
-;; INSTALL
-;; (install-elisp "https://raw.github.com/bard/mozrepl/master/chrome/content/moz.el")
 (add-hook 'js2-mode-hook
           '(lambda ()
              (local-set-key (kbd "C-c C-r") 'moz-send-region)))

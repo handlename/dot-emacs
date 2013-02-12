@@ -1,5 +1,3 @@
-;; INSTALL
-;; git clone https://github.com/handlename/coffee-mode.git
 (require 'coffee-mode)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
@@ -12,7 +10,6 @@
              (local-set-key (kbd "C-c C-c") 'coffee-compile-file)))
 
 ;; flymake
-
 (setq flymake-coffeescript-err-line-patterns
       '(("\\(Error: In \\([^,]+\\), .+ on line \\([0-9]+\\).*\\)" 2 3 nil 1)))
 

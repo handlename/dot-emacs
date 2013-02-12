@@ -1,6 +1,3 @@
-;; scala-mode.el install from elpa
-(add-to-list 'load-path "~/.emacs.d/vendor/elpa/scala-mode-20120621")
-
 (require 'scala-mode)
 (require 'scala-mode-auto)
 (add-to-list 'auto-mode-alist '("\\.scala$" . scala-mode))

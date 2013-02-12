@@ -1,0 +1,4 @@
+(:name org-tree-slide
+       :type github
+       :pkgname "takaxp/org-tree-slide"
+       :features "org-tree-slide")

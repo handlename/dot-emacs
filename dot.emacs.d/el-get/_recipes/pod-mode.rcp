@@ -1,0 +1,4 @@
+(:name pod-mode
+       :type github
+       :pkgname "renormalist/emacs-pod-mode"
+       :features "pod-mode")

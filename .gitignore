@@ -9,10 +9,11 @@ dot.emacs.d/auto-save-list
 dot.emacs.d/bin
 dot.emacs.d/bookmarks
 dot.emacs.d/eshell
+dot.emacs.d/el-get/*
 dot.emacs.d/inits/00_private.el
-dot.emacs.d/packages
 dot.emacs.d/shellenv.el
-dot.emacs.d/site-lisp
 dot.emacs.d/tags
 dot.emacs.d/tramp
 dot.emacs.d/url
+
+!dot.emacs.d/el-get/_recipes

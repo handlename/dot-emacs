@@ -1,0 +1,7 @@
+(:name ensime
+       :description "ENhanced Scala Interaction Mode for Emacs"
+       :type github
+       :pkgname "aemoncannon/ensime"
+       :depends scala-mode
+       :features ensime
+       :load-path ("./src/main/elisp"))

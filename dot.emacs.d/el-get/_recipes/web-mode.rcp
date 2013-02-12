@@ -1,0 +1,4 @@
+(:name web-mode
+       :type github
+       :pkgname "fxbois/web-mode"
+       :features "web-mode")

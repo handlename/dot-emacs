@@ -1,6 +1,3 @@
-;; INSTALL
-;; (install-elisp "https://github.com/imakado/emacs-smartchr/raw/master/smartchr.el")
-
 (require 'smartchr)
 
 (defun my-smartchr-setting ()

@@ -1,6 +1,3 @@
-;; INSTALL from package el
-;; (install-elisp "https://raw.github.com/m2ym/popwin-el/master/popwin.el")
-
 (require 'popwin)
 
 (setq special-display-function 'popwin:special-display-popup-window)

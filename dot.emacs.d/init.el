@@ -7,10 +7,6 @@
 ;;    (goto-char (point-max))
 ;;    (eval-print-last-sexp)))
 
-;; (setq el-get-base-dir "~/.emacs.d/el-get")
-;; (setq el-get-dir (concat el-get-base-dir "/packages"))
-;; (setq el-get-recipe-path (concat el-get-base-dir "/recipes"))
-
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 (unless (require 'el-get nil 'noerror)
@@ -23,18 +19,6 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/_recipes")
 
 (el-get 'sync)
-
-;; ;; Emacs実践入門 p61
-;; (defun add-to-load-path (&rest paths)
-;;   (let (path)
-;;     (dolist (path paths paths)
-;;       (let ((default-directory
-;;               (expand-file-name (concat user-emacs-directory path))))
-;;         (add-to-list 'load-path default-directory)
-;;         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-;;             (normal-top-level-add-subdirs-to-load-path))))))
-
-;(add-to-load-path "site-lisp" "auto-install" "packages")
 
 (require 'init-loader)
 

@@ -16,7 +16,6 @@
 ;; color setting for js2-highlight-vars
 (set-face-background  'js2-highlight-vars-face nil)
 (set-face-underline-p 'js2-highlight-vars-face t)
-(set-face-underline   'js2-highlight-vars-face "#7F7FFF")
 
 ;; free C-m for default function, 'newline-and-indent
 (define-key js2-mode-map (kbd "C-m") nil)
@@ -29,6 +28,9 @@
                    indent-tabs-mode nil)
              (if (featurep 'js2-highlight-vars)
                  (js2-highlight-vars-mode))))
+
+;; json-reformat
+(require 'json-reformat)
 
 ;; js-doc
 (require 'js-doc)

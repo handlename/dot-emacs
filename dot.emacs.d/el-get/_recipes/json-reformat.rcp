@@ -1,0 +1,4 @@
+(:name json-reformat
+       :type http
+       :url "https://gist.github.com/gongo/1789605/raw/081110eeb97409de1012833331a0828dc98308f3/json-reformat.el"
+       :features "json-reformat")

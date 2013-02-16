@@ -1,0 +1,14 @@
+allow_blank
+allow_nil
+attr_accessor
+attr_accessible
+attr_protected
+before_filter
+belongs_to
+debug
+has_many
+logger
+has_one
+params
+presence
+validates

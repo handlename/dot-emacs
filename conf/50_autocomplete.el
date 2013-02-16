@@ -51,6 +51,7 @@
         perl-mode
         php-mode
         python-mode
+        rhtml-mode
         ruby-mode
         scala-mode
         sh-mode

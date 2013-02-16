@@ -61,16 +61,16 @@
     (anything '(anything-c-source-emacs-commands))))
 
 ;; tag jump
-;(require 'anything-etags)
-;(require 'anything-gtags)
-;(define-key global-map (kbd "C-x t")
-;  (lambda ()
-;    "Tag jump using etags, gtags and `anything'."
-;    (interactive)
-;    (let* ((initial-pattern (regexp-quote (or (thing-at-point 'symbol) ""))))
-;      (anything (list anything-c-source-gtags-select
-;                      anything-c-source-etags-select))
-;      "Find Tag: " nil)))
+(require 'anything-etags)
+(require 'anything-gtags)
+(define-key global-map (kbd "C-x t")
+  (lambda ()
+    "Tag jump using etags, gtags and `anything'."
+    (interactive)
+    (let* ((initial-pattern (regexp-quote (or (thing-at-point 'symbol) ""))))
+      (anything (list anything-c-source-gtags-select
+                      anything-c-source-etags-select))
+      "Find Tag: " nil)))
 
 ;; anything-hatena-bookmark
 ;;(require 'anything-hatena-bookmark)
@@ -80,9 +80,13 @@
 ;; 候補ウィンドウを常に下部に表示
 ;; INSTALL
 ;; (install-elisp "http://nschum.de/src/emacs/split-root/split-root.el")
-;(require 'split-root)
-;(defun anything-display-function--split-root (buf)
-;  (let ((parcent 40.0))
-;    (set-window-buffer (split-root-window (truncate (* (frame-height) (/ parcent 100.0)))) buf)))
-;(setq anything-display-function 'anything-display-function--split-root)
+(require 'split-root)
+(defun anything-display-function--split-root (buf)
+  (let ((parcent 40.0))
+    (set-window-buffer (split-root-window (truncate (* (frame-height) (/ parcent 100.0)))) buf)))
+(setq anything-display-function 'anything-display-function--split-root)
+
+;; anything中もC-hを有効に
+(eval-after-load "anything"
+  '(define-key anything-map (kbd "C-h") 'delete-backward-char))
 

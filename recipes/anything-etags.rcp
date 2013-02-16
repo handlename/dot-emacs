@@ -1,0 +1,9 @@
+(:name anything-etags
+       :type github
+       :url "git://github.com/byplayer/anything-etags.git"
+       :features anything-etags)
+
+
+
+
+

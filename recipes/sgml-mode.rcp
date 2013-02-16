@@ -1,0 +1,6 @@
+(:name sgml-mode
+       :type http
+       :url "http://www.shallowsky.com/dotfiles/.emacs-lisp/sgml-mode.el"
+       :features sgml-mode)
+
+

@@ -12,23 +12,6 @@
 (setq html-helper-never-indent t)
 (setq html-helper-verbose nil)
 
-(defvar html-helper-new-buffer-template
-  '("<!DOCTYPE html>\n"
-    "<html lang=\"ja\">\n"
-    "\n"
-    "<head>\n"
-    "<meta charset=\"utf-8\">\n"
-    "<title></title>\n"
-    "</head>\n"
-    "\n"
-    "<body>\n"
-    "\n"
-    "\n"
-    "\n"
-    "</body>\n"
-    "</html>\n")
-  "*Template for new buffers, inserted by html-helper-insert-new-buffer-strings if html-helper-build-new-buffer is set to t")
-
 (require 'sgml-mode)
 (add-hook 'html-helper-mode-hook
           '(lambda ()

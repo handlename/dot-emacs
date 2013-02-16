@@ -1,0 +1,8 @@
+(:name multi-term
+       :type github
+       :url "https://github.com/milkypostman/multi-term"
+       :features multi-term)
+
+
+
+

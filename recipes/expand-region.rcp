@@ -1,0 +1,7 @@
+(:name expand-region
+       :type github
+       :url "git://github.com/magnars/expand-region.el.git"
+       :features expand-region)
+
+
+

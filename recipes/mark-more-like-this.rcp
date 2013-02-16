@@ -1,0 +1,5 @@
+(:name mark-more-like-this
+       :type http
+       :url "https://github.com/haksior/emacs-configuration/blob/master/site-lisp/mark-multiple/mark-more-like-this.el"
+       )
+

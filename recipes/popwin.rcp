@@ -1,0 +1,6 @@
+(:name popwin
+       :type github
+       :url "git://github.com/m2ym/popwin-el.git"
+       :features popwin)
+
+

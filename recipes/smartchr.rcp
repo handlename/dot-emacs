@@ -1,0 +1,8 @@
+(:name smartchr
+       :type github
+       :url "git://github.com/imakado/emacs-smartchr.git"
+       :features smartchr)
+
+
+
+

@@ -1,0 +1,8 @@
+(:name perlbrew
+       :type github
+       :url "git://github.com/kentaro/perlbrew.el.git"
+       :features perlbrew)
+
+
+
+

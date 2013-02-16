@@ -1,0 +1,4 @@
+(:name js2-mode
+       :type github
+       :pkgname "mooz/js2-mode"
+       )

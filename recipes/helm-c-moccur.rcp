@@ -1,0 +1,4 @@
+(:name helm-c-moccur
+       :type github
+       :pkgname "emacs-helm/helm-c-moccur"
+       :features "helm-c-moccur")

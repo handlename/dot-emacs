@@ -1,0 +1,4 @@
+(:name helm-ack
+       :type github
+       :pkgname "emacsmirror/helm-ack"
+       :features "helm-ack")

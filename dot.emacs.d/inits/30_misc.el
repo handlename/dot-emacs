@@ -124,3 +124,19 @@
           (format "open-github-from-file %s %d"
                   (file-name-nondirectory (buffer-file-name))
                   (line-number-at-pos))))))
+
+;; whitespace
+(setq whitespace-style
+      '(face
+        tabs
+        spaces
+        trailing
+        lines
+        space-before-tab
+        newline
+        indentation::space
+        empty
+        space-after-tab
+        space-mark
+        tab-mark
+        newline-mark))

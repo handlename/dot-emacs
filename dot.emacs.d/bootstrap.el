@@ -44,7 +44,6 @@
         multiple-cursors
         np
         open-junk-file
-        org
         package
         paredit
         perl-completion

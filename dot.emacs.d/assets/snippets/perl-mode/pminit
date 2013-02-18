@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: default for pm file
 # --
-package `(yas/perl-package-name)`;
+package `(yas-perl-package-name)`;
 use strict;
 use warnings;
 

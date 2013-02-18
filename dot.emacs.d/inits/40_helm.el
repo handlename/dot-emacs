@@ -48,6 +48,10 @@
            (sources (helm-c-sources-git-project-for default-directory)))
       (helm-other-buffer sources "*helm git project*"))))
 
+;; helm-perldoc
+(require 'cperl-mode)
+(add-hook 'cperl-mode-hook 'helm-perldoc:setup)
+
 ;; keybindings
 (define-key global-map (kbd "C-M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-s")   'helm-c-moccur-occur-by-moccur)
@@ -56,3 +60,5 @@
 (define-key global-map (kbd "C-x g") 'helm-git-project)
 (define-key global-map (kbd "C-x i") 'helm-imenu)
 (define-key global-map (kbd "M-x")   'helm-M-x)
+
+(define-key cperl-mode-map (kbd "C-x d") 'helm-perldoc)

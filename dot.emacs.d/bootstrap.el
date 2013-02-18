@@ -27,6 +27,7 @@
         git-gutter
         helm
         helm-c-moccur
+        helm-perldoc
         highlight-current-line
         inertial-scroll
         init-loader

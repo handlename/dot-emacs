@@ -1,0 +1,5 @@
+(:name helm-perldoc
+       :type github
+       :pkgname "syohex/emacs-helm-perldoc"
+       :features "helm-perldoc")
+

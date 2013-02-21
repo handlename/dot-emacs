@@ -57,8 +57,18 @@
 (define-key global-map (kbd "C-s")   'helm-c-moccur-occur-by-moccur)
 (define-key global-map (kbd "C-x A") 'helm-ack)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
+(define-key global-map (kbd "C-x f") 'helm-find-files)
 (define-key global-map (kbd "C-x g") 'helm-git-project)
 (define-key global-map (kbd "C-x i") 'helm-imenu)
 (define-key global-map (kbd "M-x")   'helm-M-x)
 
 (define-key cperl-mode-map (kbd "C-x d") 'helm-perldoc)
+
+;; overwrite helm debugging command prefix
+(eval-after-load 'helm
+  '(progn
+     (define-key helm-map (kbd "C-h") 'delete-backward-char)))
+
+(eval-after-load 'helm-files
+  '(progn
+     (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)))

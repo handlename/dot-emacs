@@ -1,10 +1,5 @@
 (require 'flymake)
 
-;; keybindings
-(global-set-key (kbd "M-p")   'flymake-goto-prev-error)
-(global-set-key (kbd "M-n")   'flymake-goto-next-error)
-(global-set-key (kbd "C-x d") 'flymake-popup-err-message)
-
 ;; popup error message
 (defun flymake-popup-err-message ()
   "Display a menu with errors/warnings for current line if it has errors and/or warnings."
@@ -46,3 +41,8 @@
          compile)
   (mapc 'fringe-helper-remove flymake-fringe-overlays)
   (setq flymake-fringe-overlays nil))
+
+;; keybindings
+(global-set-key (kbd "M-p")   'flymake-goto-prev-error)
+(global-set-key (kbd "M-n")   'flymake-goto-next-error)
+(global-set-key (kbd "M-d") 'flymake-popup-err-message)

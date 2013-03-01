@@ -1,6 +1,7 @@
 (require 'flymake)
 
 ;; popup error message
+(require 'popup)
 (defun flymake-popup-err-message ()
   "Display a menu with errors/warnings for current line if it has errors and/or warnings."
   (interactive)
@@ -13,10 +14,10 @@
                               "\n")))))
 
 ;; color settings
-(set-face-background 'flymake-errline nil)
-(set-face-underline 'flymake-errline "#ff0000")
-(set-face-background 'flymake-warnline nil)
-(set-face-underline 'flymake-warnline "#ffff00")
+(set-face-background  'flymake-errline nil)
+(set-face-underline-p 'flymake-errline "#ff0000")
+(set-face-background  'flymake-warnline nil)
+(set-face-underline-p 'flymake-warnline "#ffff00")
 
 ;; display error message
 (require 'fringe-helper)

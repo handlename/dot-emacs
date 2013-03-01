@@ -140,3 +140,7 @@
         space-mark
         tab-mark
         newline-mark))
+
+;; dash-at-point
+(require 'dash-at-point)
+(global-set-key (kbd "C-x d") 'dash-at-point)

@@ -1,0 +1,4 @@
+# -*- snippet -*-
+# name : binmode
+# --
+binmode ${1:STDOUT}, ':${2:utf8}';$0

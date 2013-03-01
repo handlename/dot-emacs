@@ -7,7 +7,7 @@
 ;;    (goto-char (point-max))
 ;;    (eval-print-last-sexp)))
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path (concat user-emacs-directory "/el-get/el-get"))
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -16,7 +16,7 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get/_recipes")
+(add-to-list 'el-get-recipe-path (concat user-emacs-directory "/el-get/_recipes"))
 
 (el-get 'sync)
 
@@ -33,7 +33,7 @@
                  (not (locate-library (concat el "c"))))))
           collect (file-name-nondirectory el) into ret
           finally return (if sort (sort ret 'string<) ret))))
-  (init-loader-load "~/.emacs.d/inits"))
+  (init-loader-load (concat user-emacs-directory "/inits")))
 
 ;; filenome prefix:
 ;;   - 00 : fundamental settings

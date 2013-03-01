@@ -1,13 +1,15 @@
 (defalias 'perl-mode 'cperl-mode)
 
 ;; Indent
-(defvar cperl-indent-level 4)
-(defvar cperl-continued-statement-offset 4)
-(defvar cperl-close-paren-offset -4)
-(defvar cperl-indent-region-fix-constructs t)
-(defvar cperl-indent-parens-as-block t)
-(defvar cperl-indent-subs-specially nil)
-(defvar cperl-comment-column 40)
+(custom-set-variables
+ '(cperl-indent-level 4)
+ '(cperl-continued-statement-offset 4)
+ '(cperl-brace-offset -4)
+ '(cperl-label-offset -4)
+ '(cperl-indent-parens-as-block t)
+ '(cperl-close-paren-offset -4)
+ '(cperl-tab-always-indent t)
+ '(cperl-highlight-variables-indiscriminately t))
 
 (add-to-list 'auto-mode-alist '("\\.pl$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.pm$" . cperl-mode))

@@ -103,6 +103,4 @@
       ;; perl-completion
       (setq plcmp-use-keymap nil)
       ;; keybindings
-      (local-set-key (kbd "C-x C-e") 'perl-eval)
-      (local-set-key (kbd "C-x m") 'plcmp-cmd-show-doc)
-      (local-set-key (kbd "C-x M") 'plcmp-cmd-show-doc-at-point))))
+      (local-set-key (kbd "C-x C-e") 'perl-eval))))

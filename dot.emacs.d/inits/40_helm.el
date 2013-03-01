@@ -50,6 +50,7 @@
 
 ;; helm-perldoc
 (require 'cperl-mode)
+(require 'helm-perldoc)
 (add-hook 'cperl-mode-hook 'helm-perldoc:setup)
 
 ;; keybindings
@@ -62,7 +63,7 @@
 (define-key global-map (kbd "C-x i") 'helm-imenu)
 (define-key global-map (kbd "M-x")   'helm-M-x)
 
-(define-key cperl-mode-map (kbd "C-x d") 'helm-perldoc)
+(define-key cperl-mode-map (kbd "C-x m") 'helm-perldoc)
 
 ;; overwrite helm debugging command prefix
 (eval-after-load 'helm

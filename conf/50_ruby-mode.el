@@ -25,8 +25,14 @@
     (list "ruby" (list "-c" local-file))))
  
 (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
+(push '(".+\\.thor$" flymake-ruby-init) flymake-allowed-file-name-masks)
+(push '("Gemfile$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
+
+;;(require 'smart-compile)
+;;    (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
+;;    (define-key ruby-mode-map (kbd "C-c C-c") (kbd "C-c c C-m"))
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
@@ -35,4 +41,7 @@
                  (flymake-mode t))
              ))
 
+
+(add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 

@@ -1,5 +1,6 @@
 (:name ac-company
        :type http
        :url "https://raw.github.com/buzztaiki/auto-complete/master/ac-company.el"
-       :features "ac-company")
+       :features "ac-company"
+       :depends auto-complete)
 

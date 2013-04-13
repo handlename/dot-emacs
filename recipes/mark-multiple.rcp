@@ -1,0 +1,8 @@
+(:name mark-multiple
+       :type github
+       :url "git://github.com/magnars/mark-multiple.el.git"
+       :features mark-multiple)
+
+
+
+

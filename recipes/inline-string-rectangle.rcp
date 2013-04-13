@@ -1,4 +1,0 @@
-(:name inline-string-rectangle
-       :type http
-       :url "https://github.com/magnars/mark-multiple.el/blob/master/inline-string-rectangle.el"
-       :depends (popup fuzzy))

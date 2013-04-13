@@ -1,9 +1,0 @@
-(:name yasnippet
-       :type github
-       :url "git://github.com/capitaomorte/yasnippet.git"
-       :features yasnippet)
-
-
-
-
-

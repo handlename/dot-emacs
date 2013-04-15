@@ -5,3 +5,4 @@
 (global-set-key (kbd "C-c git") 'magit-status)
 (global-set-key (kbd "C-c dci") 'magit-svn-dcommit)
 
+

@@ -6,7 +6,7 @@
 ;;(helm-mode 1)
 ;; max width of buffer name in buffer list
 ;;(setq helm-buffer-max-length 50)
- 
+
 (define-key global-map (kbd "C-M-y") 'helm-show-kill-ring)
 (define-key global-map (kbd "C-s")   'helm-c-moccur-occur-by-moccur)
 (define-key global-map (kbd "C-x A") 'helm-ack)

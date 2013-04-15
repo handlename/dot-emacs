@@ -61,16 +61,16 @@
     (anything '(anything-c-source-emacs-commands))))
 
 ;; tag jump
-;(require 'anything-etags)
-;(require 'anything-gtags)
-;(define-key global-map (kbd "C-x t")
-;  (lambda ()
-;    "Tag jump using etags, gtags and `anything'."
-;    (interactive)
-;    (let* ((initial-pattern (regexp-quote (or (thing-at-point 'symbol) ""))))
-;      (anything (list anything-c-source-gtags-select
-;                      anything-c-source-etags-select))
-;      "Find Tag: " nil)))
+(require 'anything-etags)
+(require 'anything-gtags)
+(define-key global-map (kbd "C-x t")
+  (lambda ()
+    "Tag jump using etags, gtags and `anything'."
+    (interactive)
+    (let* ((initial-pattern (regexp-quote (or (thing-at-point 'symbol) ""))))
+      (anything (list anything-c-source-gtags-select
+                      anything-c-source-etags-select))
+      "Find Tag: " nil)))
 
 ;; anything-hatena-bookmark
 ;;(require 'anything-hatena-bookmark)

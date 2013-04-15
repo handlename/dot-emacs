@@ -38,4 +38,4 @@
                  (not (locate-library (concat el "c"))))))
           collect (file-name-nondirectory el) into ret
           finally return (if sort (sort ret 'string<) ret))))
-  (init-loader-load "~/.emacs.d/conf"))
+  (init-loader-load "~/.emacs.d/init"))

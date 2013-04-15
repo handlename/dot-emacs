@@ -1,0 +1,8 @@
+(:name magit
+       :type github
+       :url "git://github.com/magit/magit.git"
+       :features magit)
+
+
+
+

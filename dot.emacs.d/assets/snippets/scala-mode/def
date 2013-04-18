@@ -1,6 +1,6 @@
 # -*- snippet -*-
 # name : def ... = { ... }
 # --
-def ${1:name}(${2:args})${3:: ${4:ret} =} {
+def ${1:name}(${2:args})${3:: ${4:ret} =} ${5:{
   $0
-}
+}}

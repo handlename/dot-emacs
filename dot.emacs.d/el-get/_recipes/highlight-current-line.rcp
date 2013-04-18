@@ -1,0 +1,4 @@
+(:name highlight-current-line
+       :type http
+       :url "http://www.emacswiki.org/emacs/download/highlight-current-line.el"
+       :features "highlight-current-line")

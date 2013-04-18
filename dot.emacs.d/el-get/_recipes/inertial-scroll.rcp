@@ -1,0 +1,4 @@
+(:name inertial-scroll
+      :type github
+      :pkgname "kiwanami/emacs-inertial-scroll"
+      :features "inertial-scroll")

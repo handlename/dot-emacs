@@ -1,0 +1,4 @@
+(:name sudo-ext
+       :type http
+       :url "http://www.emacswiki.org/emacs/download/sudo-ext.el"
+       :features "sudo-ext")

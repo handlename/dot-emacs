@@ -1,0 +1,4 @@
+(:name etags-table
+       :type http
+       :url "http://www.emacswiki.org/emacs/download/etags-table.el"
+       :features "etags-table")

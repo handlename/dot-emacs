@@ -1,0 +1,4 @@
+(:name point-undo
+       :type http
+       :url "http://www.emacswiki.org/emacs/download/point-undo.el"
+       :features "point-undo")

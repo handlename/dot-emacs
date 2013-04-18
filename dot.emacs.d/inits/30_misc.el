@@ -100,6 +100,8 @@
             (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
                 (git-gutter))))
 
+(global-set-key (kbd "M-N") 'git-gutter:next-hunk)
+(global-set-key (kbd "M-P") 'git-gutter:previous-hunk)
 
 ;; whitespace
 (setq whitespace-style

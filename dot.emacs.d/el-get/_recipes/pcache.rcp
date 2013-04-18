@@ -1,0 +1,4 @@
+(:name pcache
+       :type github
+       :pkgname "sigma/pcache"
+       :features "pcache")

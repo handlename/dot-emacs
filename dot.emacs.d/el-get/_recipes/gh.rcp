@@ -1,0 +1,5 @@
+(:name gh
+       :type github
+       :pkgname "sigma/gh.el"
+       :depends (pcache logito)
+       :features "gh")

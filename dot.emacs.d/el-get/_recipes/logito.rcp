@@ -1,0 +1,4 @@
+(:name logito
+       :type github
+       :pkgname "sigma/logito"
+       :features "logito")

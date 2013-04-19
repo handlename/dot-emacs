@@ -1,0 +1,6 @@
+(:name html-helper-mode
+       :type http-tar
+       :options ("zxvf")
+       :url "http://download.savannah.gnu.org/releases/baol-hth/html-helper-mode_3-0-4jolly.tar.gz"
+       :features "html-helper-mode")
+

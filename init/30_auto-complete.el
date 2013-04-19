@@ -65,9 +65,11 @@
 ;; for ruby-mode
 (add-hook 'ruby-mode-hook
           (lambda ()
+            (require 'rcodetools)
+            (require 'auto-complete-ruby)
             (add-to-list 'ac-sources 'ac-source-rsense)))
 
 ;; keybindings
-(define-key ac-completing-map (kbd "M-n") 'ac-next)
-(define-key ac-completing-map (kbd "M-p") 'ac-previous)
-(define-key ac-completing-map (kbd "M-s") 'ac-isearch)
+(define-key ac-completing-map (kbd "C-n") 'ac-next)
+(define-key ac-completing-map (kbd "C-p") 'ac-previous)
+(define-key ac-completing-map (kbd "C-s") 'ac-isearch)

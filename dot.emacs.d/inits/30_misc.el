@@ -122,3 +122,6 @@
 ;; dash-at-point
 (require 'dash-at-point)
 (global-set-key (kbd "C-x d") 'dash-at-point)
+
+;; moccur-edit
+(require 'moccur-edit)

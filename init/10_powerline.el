@@ -5,7 +5,7 @@
 
 (set-face-attribute 'mode-line nil
                     :foreground "#fdf6e3"
-                    :background "##ff0066"
+                    :background "#66cc66"
                     :box nil)
 (set-face-attribute 'mode-line-inactive nil
                     :box nil)

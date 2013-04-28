@@ -42,6 +42,6 @@
 
 (defun reload-chrome ()
   (interactive)
-  (shell-command "osascript ~/.emacs.d/script/chrome-reload.scpt")
-  )
+  (shell-command "osascript ~/.emacs.d/script/chrome-reload.scpt"))
+
 (global-set-key (kbd "C-c C-c C-r") 'reload-chrome)

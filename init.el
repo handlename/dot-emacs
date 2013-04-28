@@ -39,3 +39,9 @@
           collect (file-name-nondirectory el) into ret
           finally return (if sort (sort ret 'string<) ret))))
   (init-loader-load "~/.emacs.d/init"))
+
+(defun reload-chrome ()
+  (interactive)
+  (shell-command "osascript ~/.emacs.d/script/chrome-reload.scpt")
+  )
+(global-set-key (kbd "C-c C-c C-r") 'reload-chrome)

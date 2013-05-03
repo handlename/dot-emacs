@@ -2,6 +2,9 @@
 
 (setq ruby-deep-indent-paren-style nil)
 
+;; ruby-electric-mode
+(require 'ruby-electric)
+
 ;; Rsense
 ;; http://cx4a.org/software/rsense/index.html
 
@@ -47,6 +50,7 @@
           '(lambda ()
              (progn
                (if (not (null buffer-file-name)) (flymake-mode))
+               (ruby-electric-mode)
                (flymake-ruby-init))))
 
 ;; keybind

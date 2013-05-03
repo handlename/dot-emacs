@@ -56,6 +56,7 @@
         quickrun
         rsense
         rst-mode
+        ruby-electric-mode
         scala-mode
         sequential-command
         set-perl5lib

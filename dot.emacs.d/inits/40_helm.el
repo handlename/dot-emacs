@@ -64,6 +64,13 @@
 (define-key global-map (kbd "M-x")   'helm-M-x)
 
 (define-key cperl-mode-map (kbd "C-x m") 'helm-perldoc)
+(define-key cperl-mode-map (kbd "C-x M") (lambda ()
+                                           (interactive)
+                                           (message "reloading modules...")
+                                           (setq helm-perldoc:modules nil)
+                                           (helm-perldoc:setup)
+                                           (message "done")
+                                           (helm-perldoc)))
 
 ;; overwrite helm debugging command prefix
 (eval-after-load 'helm

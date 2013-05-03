@@ -19,3 +19,6 @@
                 'makefile-mode
                 'makefile-bsdmake-mode))
   (add-to-list 'jaspace-modes mode))
+
+;; end of buffer
+(setq-default indicate-empty-lines t)

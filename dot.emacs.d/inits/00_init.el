@@ -23,6 +23,7 @@
 
 ;; don't save backup files
 (setq make-backup-files nil)
+(setq auto-save-default nil)
 
 ;; inhibit bell ring
 (setq ring-bell-function 'ignore)

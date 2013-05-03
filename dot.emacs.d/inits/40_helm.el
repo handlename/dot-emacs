@@ -80,3 +80,7 @@
 (eval-after-load 'helm-files
   '(progn
      (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)))
+
+(eval-after-load 'helm-c-moccur
+  '(progn
+     (define-key helm-c-moccur-helm-map (kbd "C-h") 'delete-backward-char)))

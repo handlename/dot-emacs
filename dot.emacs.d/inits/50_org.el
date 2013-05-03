@@ -1,10 +1,10 @@
 (require 'org)
 
-(defvar org-log-done t)
-(defvar org-tags-column 72)
-(defvar org-hide-leading-stars t)
-(defvar org-startup-truncated nil)
-(defvar org-return-follows-link t)
+(setq org-log-done t)
+(setq org-tags-column 72)
+(setq org-hide-leading-stars t)
+(setq org-startup-truncated nil)
+(setq org-return-follows-link t)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 ;; key bindings
@@ -18,13 +18,13 @@
 (defvar org-agenda-text-search-extra-files (quote (agenda-archives)))
 
 ;; file
-(defvar org-directory "~/note/")
+(setq org-directory "~/note/")
 (defvar org-my-private-file (concat org-directory "private.org"))
 (defvar org-my-kayac-file (concat org-directory "kayac.org"))
 (defvar org-my-dil-file (concat org-directory "dil.org"))
 
-(defvar org-default-notes-file org-my-private-file)
-(defvar org-agenda-files
+(setq org-default-notes-file org-my-private-file)
+(setq org-agenda-files
       (list org-my-private-file
             org-my-kayac-file
             ))
@@ -41,8 +41,8 @@
         ))
 
 ;; todo
-(defvar org-use-fast-todo-selection t)
-(defvar org-todo-keywords
+(setq org-use-fast-todo-selection t)
+(setq org-todo-keywords
       '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(x)" "OVER(o)" "CANCEL(c)")))
 
 ;; org-babel

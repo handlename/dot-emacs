@@ -1,0 +1,6 @@
+(:name dash-at-point
+       :type github
+       :url "git://github.com/stanaka/dash-at-point.git"
+       :feature dash-at-point)
+
+       

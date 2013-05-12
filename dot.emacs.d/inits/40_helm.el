@@ -16,37 +16,41 @@
 (defvar helm-buffer-max-length 50)
 
 ;; helm-git-project
-(defun helm-c-sources-git-project-for (pwd)
-  (loop for elt in
-        '(("Modified files" . "--modified")
-          ("Untracked files" . "--others --exclude-standard")
-          ("All controlled files in this project" . nil))
-        for title  = (format "%s (%s)" (car elt) pwd)
-        for option = (cdr elt)
-        for cmd    = (format "git ls-files %s" (or option ""))
-        collect
-        `((name . ,title)
-          (init . (lambda ()
-                    (unless (and (not ,option) (helm-candidate-buffer))
-                      (with-current-buffer (helm-candidate-buffer 'global)
-                        (call-process-shell-command ,cmd nil t nil)))))
-          (candidates-in-buffer)
-          (type . file))))
+;; original is http://d.hatena.ne.jp/yaotti/20101216/1292500323
+;; patch from usk_t(https://gist.github.com/747399)
+(defvar helm-git-project-dir nil)
 
-(defun helm-git-project-topdir ()
-  (file-name-as-directory
-   (replace-regexp-in-string
-    "\n" ""
-    (shell-command-to-string "git rev-parse --show-toplevel"))))
+(defun git-project:root-dir ()
+  (file-name-directory (file-truename
+                        (shell-command-to-string "git rev-parse --git-dir"))))
+
+(defun helm-git-project:create-source (name options)
+  `((name . ,(concat "Git Project " name))
+    (init . (lambda ()
+              (setq helm-git-project-dir (git-project:root-dir))
+              (let ((buffer (helm-candidate-buffer 'global))
+                    (args (format "ls-files --full-name %s %s"
+                                  ,options helm-git-project-dir)))
+                (call-process-shell-command "git" nil buffer nil args))
+              ))
+    (display-to-real . (lambda (c) (concat helm-git-project-dir c)))
+    (candidates-in-buffer)
+    (action ("Find  File" . find-file))))
+
+(defvar helm-c-source-git-project-for-modified
+  (helm-git-project:create-source "Modified files" "--modified"))
+(defvar helm-c-source-git-project-for-untracked
+  (helm-git-project:create-source "Untracked files" "--others --exclude-standard"))
+(defvar helm-c-source-git-project-for-all
+  (helm-git-project:create-source "All files" ""))
 
 (defun helm-git-project ()
   (interactive)
-  (let ((topdir (helm-git-project-topdir)))
-    (unless (file-directory-p topdir)
-      (error "I'm not in Git Repository!!"))
-    (let* ((default-directory topdir)
-           (sources (helm-c-sources-git-project-for default-directory)))
-      (helm-other-buffer sources "*helm git project*"))))
+  (let ((sources '(helm-c-source-git-project-for-modified
+                   helm-c-source-git-project-for-untracked
+                   helm-c-source-git-project-for-all)))
+    (helm-other-buffer sources
+                       (format "*Helm git project in %s*" default-directory))))
 
 ;; helm-perldoc
 (require 'cperl-mode)

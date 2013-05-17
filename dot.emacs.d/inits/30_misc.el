@@ -93,16 +93,6 @@
 (global-set-key (kbd "M->") 'mc/mark-next-like-this)
 (global-set-key (kbd "M-<") 'mc/mark-previous-like-this)
 
-;; git-gutter
-(require 'git-gutter)
-(add-hook 'after-save-hook
-          (lambda ()
-            (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
-                (git-gutter))))
-
-(global-set-key (kbd "M-N") 'git-gutter:next-hunk)
-(global-set-key (kbd "M-P") 'git-gutter:previous-hunk)
-
 ;; whitespace
 (setq whitespace-style
       '(face

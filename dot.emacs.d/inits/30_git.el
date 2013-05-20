@@ -36,19 +36,38 @@
                   (file-name-nondirectory (buffer-file-name))
                   (line-number-at-pos))))))
 
-;; open tig blame
+(defun my:tmux-do-command-for-file (filepath command)
+  (progn
+    (shell-command
+     (format "tmux new-window 'cd %s; %s -- %s'"
+             (file-name-directory filepath)
+             command
+             (file-name-nondirectory filepath)))))
+
+(defun my:tmux-do-command-in-git-project (command)
+  (if (my:git-project-p)
+      (my:tmux-do-command-for-file buffer-file-name command)
+    (progn
+      (message "not in git repository.")
+      nil)))
+
+(defun my:open-iterm ()
+  (shell-command (format "open -a iTerm")))
+
+(defun my:git-diff-current-file ()
+  (interactive)
+  (if (my:tmux-do-command-in-git-project "git diff")
+      (my:open-iterm)))
+
 (defun my:tig-blame-current-file ()
   (interactive)
-  (if (git-project-p)
-        (progn
-          (shell-command
-           (format "tmux new-window 'cd %s; tig blame -- %s'"
-                   (file-name-directory buffer-file-name)
-                   (file-name-nondirectory buffer-file-name)))
-          (shell-command (format "open -a iTerm")))))
+  (if (my:tmux-do-command-in-git-project "tig blame")
+      (my:open-iterm)))
 
 (global-set-key (kbd "C-c o l") 'open-github-from-current)
 (global-set-key (kbd "C-c o f") 'open-github-from-file)
 (global-set-key (kbd "C-c o c") 'open-github-from-commit)
 (global-set-key (kbd "C-c o i") 'open-github-from-issues)
-(global-set-key (kbd "C-c o b") 'my:tig-blame-current-file)
+
+(global-set-key (kbd "C-c g b") 'my:tig-blame-current-file)
+(global-set-key (kbd "C-c g d") 'my:git-diff-current-file)

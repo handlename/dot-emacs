@@ -4,10 +4,10 @@
 
 (if window-system
     (progn
-      (set-frame-parameter nil 'alpha .95)  ; 透明度
+      (set-frame-parameter nil 'alpha .80)  ; 透明度
       (tool-bar-mode nil)                   ; ツールバー非表示
       (set-scroll-bar-mode nil)             ; スクロールバー非表示
-      (setq line-spacing 0.25)              ; 行間
+      (setq line-spacing 0.2)              ; 行間
       (when (>= emacs-major-version 23)
         (tool-bar-mode nil)
         (set-face-attribute 'default nil
@@ -55,4 +55,3 @@
 (set-face-foreground 'font-lock-type-face              "#FFFF7F") ; クラス
 (set-face-foreground 'fringe                           "#666666") ; fringe(折り返し記号などが出る部分)
 (set-face-background 'fringe                           "#282828") ; fringe
-

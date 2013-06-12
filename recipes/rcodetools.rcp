@@ -1,0 +1,4 @@
+(:name rcodetools
+       :type github
+       :url "git://github.com/tnoda/rcodetools.git"
+       :features rcodetools)

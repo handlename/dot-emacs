@@ -1,0 +1,5 @@
+(:name ruby-block
+       :type github
+       :url "git://github.com/adolfosousa/ruby-block.el.git"
+       :features ruby-block)
+

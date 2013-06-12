@@ -1,0 +1,14 @@
+;;https://github.com/dimitri/el-get/blob/master/recipes/org-mode.rcp
+(:name org-mode
+       :website "http://orgmode.org/"
+       :type git
+       :url "git://orgmode.org/org-mode.git"
+       :build/berkeley-unix `,(mapcar
+                               (lambda (target)
+                                 (list "gmake" target (concat "EMACS=" (shell-quote-argument el-get-emacs))))
+                               '("oldorg"))
+       :build `,(mapcar
+                 (lambda (target)
+                   (list "make" target (concat "EMACS=" (shell-quote-argument el-get-emacs))))
+                 '("oldorg"))
+       :load-path ("." "lisp" "contrib/lisp"))

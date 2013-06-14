@@ -1,0 +1,4 @@
+(:name emacs-git-messenger
+       :type github
+       :url "git://github.com/syohex/emacs-git-messenger.git"
+       :features emacs-git-messenger)

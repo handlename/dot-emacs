@@ -1,7 +1,7 @@
 ;; PATH
 
 ;; http://sakito.jp/emacs/emacsshell.html#path
-(dolist (dir (list           
+(dolist (dir (list
               "/usr/X11/bin"
               "/usr/local/bin"
               "/sbin"

@@ -7,6 +7,7 @@
   (local-set-key (kbd "[") (smartchr '("[" "[`!!']" "[ `!!' ]" "[[")))
   (local-set-key (kbd "\"") (smartchr '("\"" "\"`!!'\"" "\"\"")))
   (local-set-key (kbd "'") (smartchr '("'" "'`!!''" "''")))
+  (local-set-key (kbd "=") (smartchr '("=" " = " " == ")))
   )
 
 (dolist (mode '(c-mode-hook

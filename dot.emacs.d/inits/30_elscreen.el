@@ -1,4 +1,3 @@
-;; http://www.morishima.net/~naoto/software/elscreen/
 (require 'elscreen)
 
 (setq elscreen-display-tab nil)

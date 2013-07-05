@@ -23,3 +23,7 @@
 
 ;; stop blink cursor
 (blink-cursor-mode 0)
+
+;; upcase and downcase
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)

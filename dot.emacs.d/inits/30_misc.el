@@ -115,3 +115,6 @@
 
 ;; moccur-edit
 (require 'moccur-edit)
+
+;; disable vc
+(setq vc-handled-backends ())

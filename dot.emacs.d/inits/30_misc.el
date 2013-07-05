@@ -40,16 +40,16 @@
 
 ;; judge indent
 ;; http://www.emacswiki.org/emacs-en/judge-indent.el
-(when (require 'judge-indent nil t)
-  (global-judge-indent-mode t)
-  (setq judge-indent-major-modes
-        '(c-mode c++-mode
-                 cperl-mode
-                 php-mode
-                 html-helper-mode
-                 css-mode
-                 js2-mode
-                 sh-mode)))
+(require 'judge-indent nil t)
+(global-judge-indent-mode t)
+(setq judge-indent-major-modes
+      '(c-mode c++-mode
+               cperl-mode
+               php-mode
+               html-helper-mode
+               css-mode
+               js2-mode
+               sh-mode))
 
 ;; expand-region
 (require 'expand-region)

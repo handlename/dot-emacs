@@ -64,10 +64,10 @@
   (if (my:tmux-do-command-in-git-project "tig blame")
       (my:open-iterm)))
 
-(global-set-key (kbd "C-c o l") 'open-github-from-current)
-(global-set-key (kbd "C-c o f") 'open-github-from-file)
-(global-set-key (kbd "C-c o c") 'open-github-from-commit)
-(global-set-key (kbd "C-c o i") 'open-github-from-issues)
+(global-set-key (kbd "C-c o l") 'my:open-github-from-current)
+(global-set-key (kbd "C-c o f") 'my:open-github-from-file)
+(global-set-key (kbd "C-c o c") 'my:open-github-from-commit)
+(global-set-key (kbd "C-c o i") 'my:open-github-from-issues)
 
 (global-set-key (kbd "C-c g b") 'my:tig-blame-current-file)
 (global-set-key (kbd "C-c g d") 'my:git-diff-current-file)

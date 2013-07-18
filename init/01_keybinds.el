@@ -18,3 +18,5 @@
 (global-set-key (kbd "C-x M-b")   'list-buffers)
 (global-set-key (kbd "C-c C-i")   'align-regexp)
 (global-set-key (kbd "C-c C-u")   'cua-mode)
+;; anything C-h
+(keyboard-translate ?\C-h ?\C-?)

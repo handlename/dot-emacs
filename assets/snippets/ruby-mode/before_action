@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: before_action
+# key: ba
+# --
+before_action $1

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: YAML.load_file
+# key: YAML.l
+# --
+YAML.load_file($1)

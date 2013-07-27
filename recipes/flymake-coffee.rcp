@@ -1,0 +1,6 @@
+(:name flymake-coffee
+       :type github
+       :url "https://github.com/purcell/flymake-coffee.git"
+       :features flymake-coffee
+       :depends (flymake-easy)
+       )

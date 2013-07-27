@@ -44,11 +44,11 @@
 (define-key global-map (kbd "C-x C-f") 'anything-find-files)
 
 ;; calc
-(define-key global-map (kbd "C-c C-a c")
-  (lambda ()
-    "Calculate in anything"
-    (interactive)
-    (anything '(anything-c-source-calculation-result))))
+;(define-key global-map (kbd "C-c C-a c")
+;  (lambda ()
+;    "Calculate in anything"
+;    (interactive)
+;    (anything '(anything-c-source-calculation-result))))
 
 ;; killring history
 (define-key global-map (kbd "C-M-y") 'anything-show-kill-ring)
@@ -86,3 +86,5 @@
 ;    (set-window-buffer (split-root-window (truncate (* (frame-height) (/ parcent 100.0)))) buf)))
 ;(setq anything-display-function 'anything-display-function--split-root)
 
+;; C-hを聞くように
+;;(define-key anything-map (kbd "C-h") 'delete-backward-char)

@@ -1,0 +1,7 @@
+(:name emacs-highlight-uniqe-symbol
+       :type http
+       :url "https://github.com/hitode909/emacs-highlight-unique-symbol.git"
+       :features highlight-uniqe-symbol)
+
+
+

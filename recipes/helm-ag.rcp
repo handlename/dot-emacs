@@ -1,0 +1,4 @@
+(:name helm-ag
+       :type github
+       :url "https://github.com/syohex/emacs-helm-ag.git"
+       :features "helm-ag")

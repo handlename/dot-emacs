@@ -1,0 +1,5 @@
+(:name guide-key
+       :type github
+       :url "https://github.com/kbkbkbkb1/guide-key.git"
+       :features "guide-key")
+

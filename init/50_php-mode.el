@@ -12,6 +12,7 @@
 
 (add-hook 'php-mode-hook
           '(lambda ()
-             (c-set-style "stroustrup")))  
-
+             (setq tab-width 2)
+             (setq indent-tabs-mode t)
+             (c-set-style "stroustrup")))
 

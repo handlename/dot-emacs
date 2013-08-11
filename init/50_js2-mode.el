@@ -28,8 +28,8 @@
 (add-hook 'js2-mode-hook
           '(lambda ()
              (require 'js)
-             (setq js-indent-level 4
-                   js-expr-indent-offset 4
+             (setq js-indent-level 2
+                   js-expr-indent-offset 2
                    indent-tabs-mode nil)
              (if (featurep 'js2-highlight-vars)
                  (js2-highlight-vars-mode))))

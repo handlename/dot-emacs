@@ -128,6 +128,10 @@
 ;; disable vc
 (setq vc-handled-backends ())
 
+;; keyfreq
+(keyfreq-mode t)
+(keyfreq-autosave-mode t)
+
 ;; buffer-moves
 (global-set-key (kbd "M-<right>") 'buf-move-right)
 (global-set-key (kbd "M-<left>")  'buf-move-left)

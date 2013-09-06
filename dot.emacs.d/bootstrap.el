@@ -38,6 +38,7 @@
         js-doc
         judge-indent
         key-chord
+        keyfreq
         lispxmp
         magit
         markdown-mode

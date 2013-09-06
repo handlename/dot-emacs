@@ -22,6 +22,15 @@
 (global-set-key (kbd "C-a") 'seq-home)
 (global-set-key (kbd "C-e") 'seq-end)
 
+(when (require 'org nil t)
+  (define-sequential-command org-seq-home
+    org-beginning-of-line beginning-of-buffer seq-return)
+  (define-sequential-command org-seq-end
+    org-end-of-line end-of-buffer seq-return))
+(when (require 'org nil t)
+  (define-key org-mode-map (kbd "C-a") 'org-seq-home)
+  (define-key org-mode-map (kbd "C-e") 'org-seq-end))
+
 ;; uniquify
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)

@@ -36,7 +36,6 @@
         js2-highlight-vars
         js2-mode
         js-doc
-        judge-indent
         key-chord
         keyfreq
         lispxmp

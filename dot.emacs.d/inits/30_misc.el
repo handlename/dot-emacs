@@ -47,19 +47,6 @@
 ;; http://d.hatena.ne.jp/ken_m/20111219/1324318727
 (require 'srep)
 
-;; judge indent
-;; http://www.emacswiki.org/emacs-en/judge-indent.el
-(require 'judge-indent nil t)
-(global-judge-indent-mode t)
-(setq judge-indent-major-modes
-      '(c-mode c++-mode
-               cperl-mode
-               php-mode
-               html-helper-mode
-               css-mode
-               js2-mode
-               sh-mode))
-
 ;; expand-region
 (require 'expand-region)
 (global-set-key (kbd "C-M-SPC") 'er/expand-region)

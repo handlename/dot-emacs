@@ -10,6 +10,7 @@
         auto-complete-etags
         auto-save-buffers-enhanced 
         blockdiag-mode
+        buffer-moves
         c-eldoc
         coffee-mode
         color-moccur

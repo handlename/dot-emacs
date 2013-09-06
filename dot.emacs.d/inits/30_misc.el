@@ -118,3 +118,9 @@
 
 ;; disable vc
 (setq vc-handled-backends ())
+
+;; buffer-moves
+(global-set-key (kbd "M-<right>") 'buf-move-right)
+(global-set-key (kbd "M-<left>")  'buf-move-left)
+(global-set-key (kbd "M-<down>")  'buf-move-down)
+(global-set-key (kbd "M-<up>")    'buf-move-up)

@@ -15,7 +15,7 @@
               "/opt/local/sbin"
               "/opt/local/bin"
               (expand-file-name "~/bin")
-              (expand-file-name "~/local/homebrew/bin")
+              (expand-file-name "~/local/brew/bin")
               (expand-file-name "~/perl5/perlbrew/perls/5.14.2/bin")
               (expand-file-name "~/.rbenv/shims")
               ))

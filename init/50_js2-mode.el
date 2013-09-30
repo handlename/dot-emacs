@@ -47,3 +47,5 @@
 (add-hook 'js2-mode-hook
           '(lambda ()
              (local-set-key (kbd "C-c C-r") 'moz-send-region)))
+
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))

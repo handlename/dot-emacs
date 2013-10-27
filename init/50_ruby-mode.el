@@ -23,7 +23,7 @@
                        temp-file
                        (file-name-directory buffer-file-name))))
     (list "ruby" (list "-c" local-file))))
- 
+
 (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '(".+\\.thor$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("Gemfile$" flymake-ruby-init) flymake-allowed-file-name-masks)
@@ -44,4 +44,5 @@
 
 (add-to-list 'auto-mode-alist '("\\.thor$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
-
+(add-to-list 'auto-mode-alist '("Capfile" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.cap$" . ruby-mode))

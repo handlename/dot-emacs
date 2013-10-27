@@ -17,7 +17,11 @@
     "<html lang=\"ja\">\n"
     "\n"
     "<head>\n"
-    "<meta charset=\"utf-8\">\n"
+    "<meta charset=\"UTF-8\">\n"
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://html5resetcss.googlecode.com/files/html5reset-1.6.1.css\"  />\n"
+    "<!--[if lt IE 9]>\n"
+    "<script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\"></script>"
+    "<![endif]-->"
     "<title></title>\n"
     "</head>\n"
     "\n"
@@ -29,8 +33,3 @@
     "</html>\n")
   "*Template for new buffers, inserted by html-helper-insert-new-buffer-strings if html-helper-build-new-buffer is set to t")
 
-(require 'sgml-mode)
-(add-hook 'html-helper-mode-hook
-          '(lambda ()
-             (local-set-key (kbd "C-c C-e") 'sgml-close-tag)
-             (set-face-bold-p 'html-tag-face nil)))

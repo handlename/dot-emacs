@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: php-tag
+# key: php
+# type: command
+# --
+<?php
+  $1
+?>

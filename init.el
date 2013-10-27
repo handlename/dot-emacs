@@ -7,6 +7,7 @@
 ;;    (goto-char (point-max))
 ;;    (eval-print-last-sexp)))
 
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (add-to-list 'load-path (concat user-emacs-directory "el-get/el-get"))
 
 (setq

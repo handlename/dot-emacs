@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: JSON.parse
+# key: jjp
+# --
+json = JSON.parse(response.body)
+expect(json["status"]).to eq($1)

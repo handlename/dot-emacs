@@ -23,7 +23,7 @@
                           'katakana-jisx0201
                           (font-spec :family "Ricty" :size 12)))
       (split-window-horizontally)
-      ;;(ns-toggle-fullscreen-internal) 
+      ;;(ns-toggle-fullscreen-internal)
       (setq ns-pop-up-frames nil)
       ))
 ;; フルスクリーンモード

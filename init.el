@@ -46,3 +46,7 @@
   (shell-command "osascript ~/.emacs.d/script/chrome-reload.scpt"))
 
 (global-set-key (kbd "C-c C-c C-r") 'reload-chrome)
+
+(custom-set-valiables
+ '(ac-ignore-case nil))
+

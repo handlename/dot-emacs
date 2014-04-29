@@ -32,9 +32,6 @@
       (executable-find "cmdproxy")
       (error "can't find 'shell' command in PATH!!")))
 
-;; mail address
-;;(setq user-mail-address "lpqldxblqpl@gmail.com")
-
 ;; meta key
 (setq ns-command-modifier (quote meta))
 (setq ns-alternate-modifier (quote super))

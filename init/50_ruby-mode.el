@@ -30,10 +30,6 @@
 (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("^\\(.*\\):\\([0-9]+\\): \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
 
-(require 'smart-compile)
-    (define-key ruby-mode-map (kbd "C-c c") 'smart-compile)
-    (define-key ruby-mode-map (kbd "C-c C-c") (kbd "C-c c C-m"))
-
 (add-hook 'ruby-mode-hook
           '(lambda ()
              ;; Don't want flymake mode for ruby regions in rhtml files and also on read only files

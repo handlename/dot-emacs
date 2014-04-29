@@ -1,5 +1,4 @@
 (require 'flymake)
-(require 'set-perl5lib)
 
 ;; flymake for javascript
 (defconst flymake-allowed-js-file-name-masks '(("\\.user\\.js$" flymake-js17-init)

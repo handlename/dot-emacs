@@ -1,0 +1,70 @@
+(source gnu)
+(source melpa)
+
+(depends-on "ag")
+
+(depends-on "color-theme")
+(depends-on "direx")
+(depends-on "expand-region")
+(depends-on "flymake")
+(depends-on "fuzzy")
+
+
+(depends-on "multi-term")
+(depends-on "helm")
+(depends-on "helm-ag")
+(depends-on "powerline")
+(depends-on "popwin")
+(depends-on "yasnippet")
+
+;; auto-complete
+(depends-on "ac-company")
+(depends-on "auto-complete")
+(depends-on "auto-complete-clang")
+(depends-on "auto-complete-etags")
+(depends-on "auto-complete-ruby")
+
+;; YAML
+(depends-on "yaml-mode" :git "https://github.com/yoshiki/yaml-mode.git")
+
+;; Git
+(depends-on "git-gutter")
+(depends-on "git-messenger" :git "https://github.com/syohex/emacs-git-messenger.git")
+(depends-on "magit")
+
+;; ruby
+(depends-on "rhtml-mode")
+(depends-on "rinari")
+(depends-on "rspec-mode" :git "https://github.com/pezra/rspec-mode.git")
+(depends-on "ruby-block")
+(depends-on "helm-rails")
+;; php
+(depends-on "php-mode")
+
+;; Perl
+(depends-on "cperl-mode")
+
+;; HTML
+(depends-on "emmet-mode" :git "https://github.com/smihica/emmet-mode.git")
+
+;; JavaScript
+(depends-on "coffee-mode")
+(depends-on "flymake-coffee")
+(depends-on "js-doc")
+(depends-on "js2-mode")
+(depends-on "js2-highlight-vars" :git "https://github.com/skiviharju/js2-highlight-vars-mode.git")
+
+
+;; Setup
+(depends-on "init-loader")
+(depends-on "exec-path-from-shell" :git "https://github.com/purcell/exec-path-from-shell.git")
+
+;; Window
+(depends-on "powerline")
+
+;; Other
+(depends-on "guide-key")
+(depends-on "mark-multiple" :git "https://github.com/magnars/mark-multiple.el.git")
+(depends-on "htmlize")
+;;(depends-on "smartchr" :git "https://github.com/tam17aki/emacs-smartchr.git")
+

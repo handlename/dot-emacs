@@ -38,6 +38,8 @@
 (depends-on "rspec-mode" :git "https://github.com/pezra/rspec-mode.git")
 (depends-on "ruby-block")
 (depends-on "helm-rails")
+(depends-on "auto-complete-ruby")
+
 ;; php
 (depends-on "php-mode")
 
@@ -64,7 +66,8 @@
 
 ;; Other
 (depends-on "guide-key")
-(depends-on "mark-multiple" :git "https://github.com/magnars/mark-multiple.el.git")
+(depends-on "mark-multiple" :git "git@github.com:magnars/mark-multiple.el.git")
 (depends-on "htmlize")
-;;(depends-on "smartchr" :git "https://github.com/tam17aki/emacs-smartchr.git")
+;;(depends-on "smartchr" :git "git@github.com:Konboi/emacs-smartchr.git")
 
+(depends-on "smartchr" :git "git@github.com:Konboi/emacs-smartchr.git")

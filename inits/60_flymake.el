@@ -44,7 +44,7 @@
                                                ("\\.pm$" flymake-perl-init)
                                                ("\\.t$" flymake-perl-init)
                                                ))
- 
+
 (defun flymake-perl-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
                      'flymake-create-temp-inplace))
@@ -52,7 +52,7 @@
                       temp-file
                       (file-name-directory buffer-file-name))))
     (list "perl" (list "-wc" local-file))))
- 
+
 (defun flymake-perl-load ()
   (interactive)
   (set-perl5lib)
@@ -62,9 +62,9 @@
   (setq flymake-allowed-file-name-masks (append flymake-allowed-file-name-masks flymake-allowed-perl-file-name-masks))
   (setq flymake-err-line-patterns flymake-perl-err-line-patterns)
   (flymake-mode t))
- 
+
 (add-hook 'cperl-mode-hook '(lambda () (flymake-perl-load)))
- 
+
 (defun next-flymake-error ()
   (interactive)
   (flymake-goto-next-error)

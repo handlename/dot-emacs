@@ -1,5 +1,4 @@
 ;; PATH
-
 ;; http://sakito.jp/emacs/emacsshell.html#path
 (dolist (dir (list
               "/usr/X11/bin"
@@ -15,9 +14,9 @@
               "/opt/local/sbin"
               "/opt/local/bin"
               (expand-file-name "~/bin")
-              (expand-file-name "~/local/brew/bin")
-              (expand-file-name "~/perl5/perlbrew/perls/5.14.2/bin")
-              (expand-file-name "~/.rbenv/shims")
+              (expand-file-name "~/.anyenv/envs/plenv/shims")
+              (expand-file-name "~/.anyenv/envs/rbenv/shims")
+              (expand-file-name "~/.anyenv/envs/ndenv/shims")
               ))
   ;; PATH と exec-path に同じ物を追加します
   (when  ;;(and

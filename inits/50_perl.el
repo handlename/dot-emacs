@@ -6,7 +6,7 @@
 (setq cperl-indent-parens-as-block t)
 (setq cperl-close-paren-offset -4)
 (setq cperl-tab-always-indent t)
-(setq cperl-electric-parens t) ; 対応する括弧自動挿入 うざい
+(setq cperl-electric-parens t) ; 対応する括弧自動挿入
 (setq cperl-invalid-face nil)
 (setq cperl-highlight-variables-indiscriminately t)
 
@@ -26,7 +26,7 @@
                               (set-face-background 'cperl-array-face (face-background 'default))
                               (setq cperl-array-face 'cperl-array-face)
                               ))
-                              
+
 
 ; from Best Practices
 ; Use % to match various kinds of brackets...
@@ -60,7 +60,6 @@
   (perltidy-region)))
 
 ;; perl completion
-(add-to-list 'load-path "~/.emacs.d/site-lisp/perl-completion")
 (add-hook 'cperl-mode-hook (lambda ()
                              (require 'perl-completion)
                              (perl-completion-mode t)))
@@ -79,4 +78,5 @@
 (global-set-key "\C-c\C-t" 'perltidy-defun)
 
 (add-to-list 'auto-mode-alist '("\\.t$" . perl-mode))
+(add-to-list 'auto-mode-alist '("\\.pm$" . perl-mode))
 (add-to-list 'auto-mode-alist '("\\.psgi$" . perl-mode))

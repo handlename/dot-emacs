@@ -1,6 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/el-get/magit")
-(add-to-list 'load-path "~/.emacs.d/el-get/git-commit-mode")
-
 (require 'magit)
 
 (push '(magit-status :position left :height 0.5) popwin:special-display-config)

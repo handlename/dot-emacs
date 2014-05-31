@@ -13,16 +13,15 @@
 (depends-on "multi-term")
 (depends-on "helm")
 (depends-on "helm-ag")
+(depends-on "helm-c-moccur")
 (depends-on "powerline")
 (depends-on "popwin")
 (depends-on "yasnippet")
 
 ;; auto-complete
-(depends-on "ac-company")
 (depends-on "auto-complete")
 (depends-on "auto-complete-clang")
-(depends-on "auto-complete-etags")
-(depends-on "auto-complete-ruby")
+
 
 ;; YAML
 (depends-on "yaml-mode" :git "https://github.com/yoshiki/yaml-mode.git")
@@ -38,7 +37,7 @@
 (depends-on "rspec-mode" :git "https://github.com/pezra/rspec-mode.git")
 (depends-on "ruby-block")
 (depends-on "helm-rails")
-(depends-on "auto-complete-ruby")
+(depends-on "ruby-electric" :git "git@github.com:qoobaa/ruby-electric.git")
 
 ;; php
 (depends-on "php-mode")

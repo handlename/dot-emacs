@@ -1,6 +1,7 @@
 (require 'helm-config)
 (require 'helm-files)
 (require 'helm-ag)
+(require 'helm-gtags)
 
 (helm-mode 1)
 

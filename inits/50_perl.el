@@ -15,10 +15,8 @@
 
 (add-hook 'cperl-mode-hook '(lambda ()
                               (setq indent-tabs-mode nil)
-                              ; BestPractices からぱくったがなんかうごいてない
                               (setq fill-column 78)
                               (setq auto-fill-mode t)
-                              ; face設定。これはどっかちがうとこにうつす
                               (set-face-background 'cperl-hash-face (face-background 'default))
                               (setq cperl-hash-face 'cperl-hash-face)
                               ;(make-face 'cperl-array-face)
@@ -80,3 +78,4 @@
 (add-to-list 'auto-mode-alist '("\\.t$" . perl-mode))
 (add-to-list 'auto-mode-alist '("\\.pm$" . perl-mode))
 (add-to-list 'auto-mode-alist '("\\.psgi$" . perl-mode))
+(add-to-list 'auto-mode-alist '("\\.pl$" . perl-mode))

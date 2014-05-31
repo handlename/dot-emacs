@@ -12,6 +12,7 @@
 (depends-on "helm")
 (depends-on "helm-ag")
 (depends-on "helm-c-moccur")
+(depends-on "helm-gtags")
 (depends-on "powerline")
 (depends-on "popwin")
 (depends-on "yasnippet")

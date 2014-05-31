@@ -14,6 +14,7 @@
         css-mode
         ecmascript-mode
         emacs-lisp-mode
+        fundamental-mode
         html-helper-mode
         java-mode
         javascript-mode

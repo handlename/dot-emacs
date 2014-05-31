@@ -8,8 +8,6 @@
 (depends-on "expand-region")
 (depends-on "flymake")
 (depends-on "fuzzy")
-
-
 (depends-on "multi-term")
 (depends-on "helm")
 (depends-on "helm-ag")
@@ -44,6 +42,8 @@
 
 ;; Perl
 (depends-on "cperl-mode")
+(depends-on "helm-perldoc" :git "git@github.com:syohex/emacs-helm-perldoc.git")
+(depends-on "perl-completion")
 
 ;; HTML
 (depends-on "emmet-mode" :git "https://github.com/smihica/emmet-mode.git")

@@ -3,7 +3,7 @@
 (push '(magit-status :position left :height 0.5) popwin:special-display-config)
 
 (global-set-key (kbd "C-c git") 'magit-status)
-(global-set-key (kbd "C-c pu")  'magit-push)
+(global-set-key (kbd "C-x pu")  'magit-push)
 
 (eval-after-load 'magit
   '(progn

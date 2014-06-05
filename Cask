@@ -45,6 +45,7 @@
 (depends-on "cperl-mode")
 (depends-on "helm-perldoc" :git "git@github.com:syohex/emacs-helm-perldoc.git")
 (depends-on "perl-completion")
+(depends-on "tx-mode" :git "git@github.com:yoshiki/tx-mode.git")
 
 ;; HTML
 (depends-on "emmet-mode" :git "https://github.com/smihica/emmet-mode.git")
@@ -60,9 +61,6 @@
 ;; Setup
 (depends-on "init-loader")
 (depends-on "exec-path-from-shell" :git "https://github.com/purcell/exec-path-from-shell.git")
-
-;; Window
-(depends-on "powerline")
 
 ;; Other
 (depends-on "guide-key")

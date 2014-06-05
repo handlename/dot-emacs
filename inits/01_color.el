@@ -28,7 +28,7 @@
  '(font-lock-function-name-face ((t (:foreground "#FFFFFF"))))
 
  ;; 変数名・変数の内容
- '(font-lock-variable-name-face ((t (:foreground "#FFFFFF"))))
+ '(font-lock-variable-name-face ((t (:foreground "#A9E2F3"))))
  '(font-lock-string-face ((t (:foreground "#E6DB74"))))
 
  ;; 特定キーワード

@@ -11,7 +11,7 @@
  '(default ((t (:background "#1B1D1E" :foreground "#F8F8F2"))))
 
  ;; 選択範囲
- '(region ((t (:background "#403D3D"))))
+ '(region ((t (:background "#C0C0C0"))))
 
  ;; モードライン
  '(mode-line ((t (:foreground "#F8F8F2" :background "#000000"

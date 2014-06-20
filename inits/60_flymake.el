@@ -45,25 +45,17 @@
                                                ("\\.t$" flymake-perl-init)
                                                ))
 
+;;Perl
+;; http://hitode909.hatenablog.com/entry/2013/08/04/194929
+;; https://github.com/hitode909/emacs-config/blob/master/inits/50-perl-config.el
 (defun flymake-perl-init ()
-  (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                     'flymake-create-temp-inplace))
-         (local-file (file-relative-name
-                      temp-file
-                      (file-name-directory buffer-file-name))))
-    (list "perl" (list "-wc" local-file))))
+  (let* ((root (expand-file-name (or (vc-git-root default-directory) default-directory))))
+    (list "perl" (list "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]" "-wc"  buffer-file-name) root)
+    ))
 
-(defun flymake-perl-load ()
-  (interactive)
-  (set-perl5lib)
-  (defadvice flymake-post-syntax-check (before flymake-force-check-was-interrupted)
-    (setq flymake-check-was-interrupted t))
-  (ad-activate 'flymake-post-syntax-check)
-  (setq flymake-allowed-file-name-masks (append flymake-allowed-file-name-masks flymake-allowed-perl-file-name-masks))
-  (setq flymake-err-line-patterns flymake-perl-err-line-patterns)
-  (flymake-mode t))
-
-(add-hook 'cperl-mode-hook '(lambda () (flymake-perl-load)))
+(push '(".+\\.p[ml]$" flymake-perl-init) flymake-allowed-file-name-masks)
+(push '(".+\\.psgi$" flymake-perl-init) flymake-allowed-file-name-masks)
+(push '(".+\\.t$" flymake-perl-init) flymake-allowed-file-name-masks)
 
 (defun next-flymake-error ()
   (interactive)

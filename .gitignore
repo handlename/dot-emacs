@@ -1,3 +1,5 @@
 *~
 auto-save-list
 elpa
+shellenv.el
+inits/00_private.el*

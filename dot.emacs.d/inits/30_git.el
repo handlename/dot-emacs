@@ -7,16 +7,29 @@
     (shell-command-to-string "git rev-parse --is-inside-work-tree"))
    "true"))
 
-;; git-gutter
-(require 'git-gutter-fringe)
+;; ;; git-gutter
+;; (require 'git-gutter-fringe)
 
-(add-hook 'after-save-hook
-          (lambda ()
-            (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
-                (git-gutter))))
+;; (add-hook 'after-save-hook
+;;           (lambda ()
+;;             (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
+;;                 (git-gutter))))
 
-(global-set-key (kbd "M-N") 'git-gutter:next-hunk)
-(global-set-key (kbd "M-P") 'git-gutter:previous-hunk)
+;; (global-set-key (kbd "M-N") 'git-gutter:next-hunk)
+;; (global-set-key (kbd "M-P") 'git-gutter:previous-hunk)
+;; git-gutter+
+;; (require 'git-gutter+)
+;; (global-git-gutter+-mode t)
+
+;; (add-hook 'after-save-hook
+;;           (lambda ()
+;;             (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
+;;                 (git-gutter))))
+
+;; (eval-after-load 'git-gutter+
+;;   '(progn
+;;      (global-set-key (kbd "M-N") 'git-gutter+-next-hunk)
+;;      (global-set-key (kbd "M-P") 'git-gutter+-previous-hunk)))
 
 ;; open-github
 ;; http://shibayu36.hatenablog.com/entry/2013/01/18/211428
@@ -64,6 +77,11 @@
   (if (my:tmux-do-command-in-git-project "tig blame")
       (my:open-iterm)))
 
+(defun my:git-log-current-file ()
+  (interactive)
+  (if (my:tmux-do-command-in-git-project "git log")
+      (my:open-iterm)))
+
 (global-set-key (kbd "C-c o l") 'my:open-github-from-current)
 (global-set-key (kbd "C-c o f") 'my:open-github-from-file)
 (global-set-key (kbd "C-c o c") 'my:open-github-from-commit)
@@ -71,3 +89,4 @@
 
 (global-set-key (kbd "C-c g b") 'my:tig-blame-current-file)
 (global-set-key (kbd "C-c g d") 'my:git-diff-current-file)
+(global-set-key (kbd "C-c g l") 'my:git-log-current-file)

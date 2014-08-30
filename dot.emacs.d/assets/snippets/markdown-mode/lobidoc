@@ -1,0 +1,21 @@
+# -*- snippet -*-
+# name : lobidoc
+# --
+## $0
+
+### Request Parameters
+
+* \`name\` [type] optional
+
+### Response
+
+\`\`\`json
+\`\`\`
+
+### Errors
+
+*
+
+### Required Scopes
+
+*

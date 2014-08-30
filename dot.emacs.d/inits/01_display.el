@@ -2,7 +2,7 @@
 (if window-system
     (progn
       (set-frame-parameter nil 'alpha 90)
-      (tool-bar-mode nil)
+      (tool-bar-mode -1)
       (set-scroll-bar-mode nil)
       (setq line-spacing 0.2)
       (when (>= emacs-major-version 23)

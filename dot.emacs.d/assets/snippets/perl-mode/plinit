@@ -5,7 +5,7 @@
 
 use strict;
 use warnings;
-use feature 'say';
+use utf8;
 
 ${1:use App::Options(
     option => {

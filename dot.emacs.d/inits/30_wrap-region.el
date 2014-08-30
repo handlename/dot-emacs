@@ -1,2 +1,3 @@
 (require 'wrap-region)
-(wrap-region-mode t)
+;(wrap-region-global-mode t)
+

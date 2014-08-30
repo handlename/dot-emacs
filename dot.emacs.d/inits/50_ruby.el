@@ -1,3 +1,8 @@
+(require 'ruby-mode)
+
+;; auto-mode
+(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
+
 ;; indent
 
 (setq ruby-deep-indent-paren-style nil)
@@ -8,9 +13,9 @@
 ;; Rsense
 ;; http://cx4a.org/software/rsense/index.html
 
-;; TODO: read rsense-home from ~/.rsense
-(setq rsense-home "/Users/handle/.emacs.d/site-lisp/rsense")
-(require 'rsense)
+;; ;; TODO: read rsense-home from ~/.rsense
+;; (setq rsense-home "/Users/handle/.emacs.d/site-lisp/rsense")
+;; (require 'rsense)
 
 ;; flymake
 ;; http://d.hatena.ne.jp/gan2/20080702/1214972962
@@ -43,6 +48,9 @@
     (when indent
       (indent-line-to indent)
       (when (> offset 0) (forward-char offset)))))
+
+;; no magic comment
+(defun ruby-mode-set-encoding () ())
 
 ;; hook
 

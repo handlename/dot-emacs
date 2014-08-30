@@ -1,0 +1,5 @@
+(:name git-gutter+
+       :type github
+       :pkgname "nonsequitur/git-gutter-plus"
+       :depends (git-commit-mode)
+       :features "git-gutter+")

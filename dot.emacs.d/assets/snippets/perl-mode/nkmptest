@@ -1,12 +1,11 @@
 # -*- snippet -*-
 # name : test template for Nakamap
 # --
-use Nakamap::Test;
+use HTTP::Request::Common;
 use Test::More;
 
-use HTTP::Request::Common;
-
-use Nakamap::Models qw/M/;
+use Nakamap::Models;
+use Nakamap::Test;
 
 init_table_all();
 

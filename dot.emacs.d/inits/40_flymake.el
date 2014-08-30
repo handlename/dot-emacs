@@ -8,7 +8,7 @@
   (let* ((line-no (flymake-current-line-no))
          (line-err-info-list (nth 0 (flymake-find-err-info flymake-err-info line-no)))
          (menu-data (flymake-make-err-menu-data line-no line-err-info-list)))
-    (if menu-data
+     (if menu-data
         (popup-tip (mapconcat '(lambda (e) (nth 0 e))
                               (nth 1 menu-data)
                               "\n")))))

@@ -6,7 +6,10 @@
                                 "\\*blockdiag\\*"
                                 "\\*compilation\\*"
                                 "\\*BackTrace\\*"
-                                "\\*quickrun\\*"))
+                                "\\*helm"
+                                "\\*quickrun\\*"
+                                "\\*ENSIME-"
+                                "\\*Inspector\\*"))
 
 (setq popwin:popup-window-height 0.33)
 (setq popwin:popup-window-width  0.33)

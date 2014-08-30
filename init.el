@@ -9,8 +9,11 @@
 (defvar my:packages
   '(init-loader
     solarized-theme
+
+    ;; utility
     helm
     editorconfig
+    popwin
     ))
 
 (dolist (package my:packages)

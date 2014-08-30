@@ -1,4 +1,5 @@
 ;;;; display senttings
+
 ;;;; only for window system
 (if window-system
     (progn
@@ -27,3 +28,9 @@
       (set-fontset-font (frame-parameter nil 'font)
                         'katakana-jisx0201
                         (font-spec :family my:font) nil 'append)))
+
+;;;; theme
+(require 'solarized-theme)
+(setq solarized-use-less-bold t)
+(setq solarized-distinct-fringe-background t)
+(load-theme 'solarized-dark t)

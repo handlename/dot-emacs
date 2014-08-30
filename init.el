@@ -1,11 +1,14 @@
+(require 'cl)
+
 ;;;; package
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
 (defvar my:packages
   '(init-loader
+    solarized-theme
     ))
 
 (dolist (package my:packages)
@@ -17,7 +20,6 @@
 
 ;;; load except compiled file.
 ;;; http://d.hatena.ne.jp/sugyan/20120101/1325429637
-(eval-when-compile (require 'cl))
 (flet ((init-loader--re-load-files
     (re dir &optional sort)
     (loop for el in (directory-files dir t)

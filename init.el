@@ -9,6 +9,7 @@
 (defvar my:packages
   '(init-loader
     solarized-theme
+    helm
     ))
 
 (dolist (package my:packages)
@@ -35,8 +36,9 @@
 ;;   - 00 : fundamental settings
 ;;   - 10 : pre load settings
 ;;   - 20 : custom functions
-;;   - 30 : minor mode settings
-;;   - 40 : major mode settings
+;;   - 30 : utils
+;;   - 40 : minor mode
+;;   - 50 : major mode
 ;;   - 90 : post load settings
 
 ;;;; key

@@ -8,12 +8,16 @@
 
 (defvar my:packages
   '(init-loader
+    ;; theme
     solarized-theme
 
-    ;; utility
+    ;; utils
     helm
     editorconfig
     popwin
+
+    ;; minor mode
+    auto-complete
     ))
 
 (dolist (package my:packages)

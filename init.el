@@ -10,6 +10,7 @@
   '(init-loader
     solarized-theme
     helm
+    editorconfig
     ))
 
 (dolist (package my:packages)

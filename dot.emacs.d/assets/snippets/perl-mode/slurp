@@ -1,4 +1,0 @@
-# -*- snippet -*-
-#name : do { local $/; <$fh> }
-# --
-do { local $/; <${0:$fh}> };

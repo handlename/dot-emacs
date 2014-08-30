@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-# name: getElementById(...)
-# --
-getElementById($0)

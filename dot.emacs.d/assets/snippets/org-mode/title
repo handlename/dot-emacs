@@ -1,3 +1,0 @@
-#name : Title Block
-# --
-#+TITLE: ${1:title}

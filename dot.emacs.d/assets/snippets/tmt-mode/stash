@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-# name: stash
-# --
-? my $$1 = stash->{$1};

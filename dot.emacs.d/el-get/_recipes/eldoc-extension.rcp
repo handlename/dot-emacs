@@ -1,4 +1,0 @@
-(:name eldoc-extension
-       :type http
-       :url "http://emacswiki.org/emacs/download/eldoc-extension.el"
-       :features "eldoc-extension")

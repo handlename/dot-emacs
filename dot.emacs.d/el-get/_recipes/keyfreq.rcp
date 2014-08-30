@@ -1,4 +1,0 @@
-(:name keyfreq
-       :type github
-       :pkgname "dacap/keyfreq"
-       :features "keyfreq")

@@ -1,4 +1,0 @@
-#name : Reference Label
-# --
-[${1:Reference}]: ${2:URL} $3
-$0

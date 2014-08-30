@@ -1,3 +1,0 @@
-#name : SEQ TODO
-# --
-#+SEQ_TODO: ${1:STATES} | ${2:FINISHED}

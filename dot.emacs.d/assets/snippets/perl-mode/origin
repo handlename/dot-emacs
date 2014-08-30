@@ -1,4 +1,0 @@
-# -*- snippet -*-
-# name : warn method origin;
-# --
-use B qw(svref_2object); warn svref_2object(${1:class}->can('${2:method}'))->GV->STASH->NAME;

@@ -1,5 +1,0 @@
-(:name perl-completion
-       :type http
-       :url "http://www.emacswiki.org/emacs/download/perl-completion.el"
-       :features "perl-completion")
-

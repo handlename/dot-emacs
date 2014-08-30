@@ -1,5 +1,0 @@
-#name : <blockquote>...</blockquote>
-# --
-<blockquote>
-  $1
-</blockquote>

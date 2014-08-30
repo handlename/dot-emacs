@@ -1,6 +1,0 @@
-# -*- snippet -*-
-# name: def ... end
-# --
-def $1($2)
-    $0
-end

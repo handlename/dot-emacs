@@ -1,4 +1,0 @@
-(:name popup
-       :type github
-       :pkgname "auto-complete/popup-el"
-       :features "popup")

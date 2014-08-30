@@ -1,6 +1,0 @@
-# -*- snippet -*-
-# name: while ... end
-# --
-while $1 do
-    $0
-end

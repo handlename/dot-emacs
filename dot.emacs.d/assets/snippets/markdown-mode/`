@@ -1,3 +1,0 @@
-#name : Inline Code
-# --
-\`${1:Code}\` $0

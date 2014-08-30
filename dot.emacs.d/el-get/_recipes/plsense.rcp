@@ -1,5 +1,0 @@
-(:name plsense
-       :type github
-       :pkgname "aki2o/emacs-plsense"
-       :depends (auto-complete log4e yaxception)
-       :features "plsense")

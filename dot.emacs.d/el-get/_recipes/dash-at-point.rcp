@@ -1,4 +1,0 @@
-(:name dash-at-point
-       :type github
-       :pkgname "stanaka/dash-at-point"
-       :features "dash-at-point")

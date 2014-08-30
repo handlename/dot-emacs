@@ -1,4 +1,0 @@
-(:name judge-indent
-       :type github
-       :pkgname "yascentur/judge-indent-el"
-       :features "judge-indent")

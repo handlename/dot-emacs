@@ -1,3 +1,0 @@
-#name : Email
-# --
-#+EMAIL: ${1:`user-mail-address`}

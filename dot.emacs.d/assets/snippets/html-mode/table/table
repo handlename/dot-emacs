@@ -1,5 +1,0 @@
-#name : <table ...>...</table>
-# --
-<table$1>
-$0
-</table>

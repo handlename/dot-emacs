@@ -1,5 +1,0 @@
-#name : #region ... #endregion
-# --
-#region $1
-$0
-#endregion

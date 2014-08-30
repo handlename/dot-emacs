@@ -1,5 +1,0 @@
-(:name rsense
-       :type github
-       :pkgname "m2ym/rsense"
-       :load-path ("./etc")
-       :features "rsense")

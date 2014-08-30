@@ -1,5 +1,0 @@
-(:name js2-highlight-vars
-       :type http
-       :url "http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode/js2-highlight-vars-mode/js2-highlight-vars.el"
-       :depends js2-mode
-       :features "js2-highlight-vars")

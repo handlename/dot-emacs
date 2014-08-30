@@ -1,5 +1,0 @@
-(:name open-github
-       :type github
-       :pkgname "syohex/emacs-open-github"
-       :depends (helm gh)
-       :features "open-github")

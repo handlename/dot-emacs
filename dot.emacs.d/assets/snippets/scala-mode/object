@@ -1,6 +1,0 @@
-# -*- snippet -*-
-# name : object ... { ... }
-# --
-object $1 {
-  $0
-}

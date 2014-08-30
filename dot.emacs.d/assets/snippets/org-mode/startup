@@ -1,3 +1,0 @@
-#name : Startup
-# --
-#+STARTUP: ${1:options}

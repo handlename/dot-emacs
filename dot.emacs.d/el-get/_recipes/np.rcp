@@ -1,5 +1,0 @@
-(:name np
-       :type http
-       :url "https://gist.github.com/handlename/4759570/raw/7cb4aaf722e4967139948cf3216828bd106c532b/np.el"
-       :features "np")
-

@@ -1,4 +1,0 @@
-(:name yaxception
-       :type github
-       :pkgname "aki2o/yaxception"
-       :features "yaxception")

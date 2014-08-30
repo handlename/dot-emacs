@@ -1,4 +1,0 @@
-(:name blockdiag-mode
-       :type http
-       :url "https://raw.github.com/maple/emacsfiles/master/blockdiag-mode.el"
-       :features blockdiag-mode)

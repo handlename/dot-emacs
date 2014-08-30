@@ -1,5 +1,0 @@
-#name : <html>...</html>
-# --
-<html${1: xmlns="http://www.w3.org/1999/xhtml" xml:lang="${2:jp}" lang="${2:jp}"}>
-$0
-</html>

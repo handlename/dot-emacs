@@ -1,7 +1,0 @@
-# -*- snippet -*-
-#name : @interface ... @end
-#key  : @interface
-# --
-@interface $1
-$0
-@end

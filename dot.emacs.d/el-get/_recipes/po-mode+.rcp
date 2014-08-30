@@ -1,4 +1,0 @@
-(:name po-mode+
-       :type http
-       :url "http://www.emacswiki.org/emacs/download/po-mode+.el"
-       :features "po-mode+")

@@ -1,5 +1,0 @@
-(:name git-messenger
-       :type github
-       :pkgname "syohex/emacs-git-messenger"
-       :depends git-gutter
-       :features "git-messenger")

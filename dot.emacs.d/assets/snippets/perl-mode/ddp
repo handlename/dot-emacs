@@ -1,3 +1,0 @@
-#name : use DDP; p(...);
-# --
-use DDP; p($0);

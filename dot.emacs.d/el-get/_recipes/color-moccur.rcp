@@ -1,4 +1,0 @@
-(:name color-moccur
-       :type http
-       :url "http://emacswiki.org/emacs/download/color-moccur.el"
-       :features "color-moccur")

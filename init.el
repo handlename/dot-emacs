@@ -40,8 +40,3 @@
 ;;   - 40 : minor mode
 ;;   - 50 : major mode
 ;;   - 90 : post load settings
-
-;;;; key
-(global-set-key (kbd "C-h") 'delete-backward-char)
-(setq ns-command-modifier (quote meta))
-(setq ns-alternate-modifier (quote super))

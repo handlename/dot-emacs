@@ -10,6 +10,7 @@
                                 "\\*auto-async-byte-compile\\*"
                                 "\\*blockdiag\\*"
                                 "\\*compilation\\*"
+                                "\\*Gofmt Errors\\*"
                                 "\\*helm"
                                 "\\*quickrun\\*"
                                 "\\.po"

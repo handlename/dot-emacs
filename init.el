@@ -18,6 +18,9 @@
 
     ;; minor mode
     auto-complete
+
+    ;; major mode
+    go-mode
     ))
 
 (dolist (package my:packages)

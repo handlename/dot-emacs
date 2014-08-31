@@ -3,7 +3,7 @@
 (setq special-display-function 'popwin:special-display-popup-window)
 (setq special-display-regexps '(
                                 "\\*BackTrace\\*"
-                                "\\*Compile-Logs\\*"
+                                "\\*Compile-Log\\*"
                                 "\\*ENSIME-"
                                 "\\*Inspector\\*"
                                 "\\*Help\\*"

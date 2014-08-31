@@ -21,6 +21,7 @@
 
     ;; major mode
     go-mode
+    markdown-mode
     ))
 
 (dolist (package my:packages)

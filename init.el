@@ -15,6 +15,7 @@
     helm
     editorconfig
     popwin
+    projectile
 
     ;; minor mode
     auto-complete

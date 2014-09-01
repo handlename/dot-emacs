@@ -4,3 +4,4 @@ elpa
 shellenv.el
 inits/00_private.el*
 ac-comphist.dat
+projectile-bookmarks.eld

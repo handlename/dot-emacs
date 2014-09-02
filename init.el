@@ -46,12 +46,3 @@
           collect (file-name-nondirectory el) into ret
           finally return (if sort (sort ret 'string<) ret))))
   (init-loader-load (concat user-emacs-directory "/inits")))
-
-;; inits/* filenome prefix:
-;;   - 00 : fundamental settings
-;;   - 10 : pre load settings
-;;   - 20 : custom functions
-;;   - 30 : utils
-;;   - 40 : minor mode
-;;   - 50 : major mode
-;;   - 90 : post load settings

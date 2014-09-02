@@ -1,10 +1,12 @@
 (require 'cl)
 
-;;;; package
+;;;; quelpa
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
+(unless (require 'quelpa nil t)
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
+    (eval-buffer)))
 
 (defvar my:packages
   '(init-loader
@@ -13,6 +15,7 @@
 
     ;; utils
     helm
+    helm-projectile
     editorconfig
     popwin
     projectile
@@ -26,8 +29,7 @@
     ))
 
 (dolist (package my:packages)
-  (unless (package-installed-p package)
-    (package-install package)))
+  (quelpa package))
 
 ;;;; init-loader
 (require 'init-loader)

@@ -1,6 +1,7 @@
 *~
 auto-save-list
 elpa
+quelpa
 shellenv.el
 inits/00_private.el*
 ac-comphist.dat

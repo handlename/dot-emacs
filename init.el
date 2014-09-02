@@ -19,6 +19,7 @@
     editorconfig
     popwin
     projectile
+    open-junk-file
 
     ;; minor mode
     auto-complete

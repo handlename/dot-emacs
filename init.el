@@ -20,6 +20,7 @@
     popwin
     projectile
     open-junk-file
+    smartparens
 
     ;; minor mode
     auto-complete

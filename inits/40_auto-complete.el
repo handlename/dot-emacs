@@ -6,6 +6,7 @@
 (global-auto-complete-mode t)
 (setq ac-modes '(
                  cperl-mode
+                 emacs-lisp-mode
                  go-mode
                  ))
 

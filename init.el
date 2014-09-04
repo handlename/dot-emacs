@@ -21,6 +21,7 @@
     projectile
     open-junk-file
     smartparens
+    sequential-command
 
     ;; minor mode
     auto-complete

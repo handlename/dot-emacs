@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: default for pm file
+# --
+package `
+(let ((file-path (file-name-sans-extension (buffer-file-name))))
+    (if (string-match "lib/" file-path)
+        (replace-regexp-in-string "/" "::"
+                                  (car (last (split-string file-path "/lib/"))))
+      (file-name-nondirectory file-path)))
+`;
+use strict;
+use warnings;
+
+$0
+
+1;

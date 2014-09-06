@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: default for sh file
+# --
+#!/bin/bash
+
+function usage {
+    cat<<EOF
+Usage:
+    $(basename \$0)
+
+Description:
+    This script is ...
+EOF
+}
+
+function main {
+    echo "main process"
+}
+
+case \${1} in
+    help|--help|-h)
+        usage
+        ;;
+
+    *)
+        main
+        ;;
+esac

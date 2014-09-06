@@ -1,0 +1,18 @@
+# -*- snippet -*-
+# name : test template for Lobi
+# --
+use Test::More;
+use HTTP::Request::Common;
+
+use Nakamap::Test;
+use Nakamap::Models;
+
+init_table_all();
+
+test_$0 sub {
+    my ($cb) = @_;
+
+    my $base_uri = URI->new("/");
+};
+
+done_testing;

@@ -30,6 +30,7 @@
 
     ;; minor mode
     auto-complete
+    yasnippet
 
     ;; major mode
     go-mode

@@ -19,6 +19,8 @@
     editorconfig
     popwin
     projectile
+    flycheck
+    flycheck-pos-tip
     open-junk-file
     smartparens
     sequential-command

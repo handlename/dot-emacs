@@ -12,5 +12,12 @@
 (global-set-key (kbd "C-M-r")   'replace-regexp)
 (global-set-key (kbd "C-r")     'replace-string)
 
+;;; disable C-x C-b to avoid miss hit of C-x b...
 (global-set-key (kbd "C-x C-b") nil)
 (global-set-key (kbd "C-x M-b") 'list-buffers)
+
+;;; auto indent yanked text
+(global-set-key (kbd "C-M-y") (lambda ()
+                               (interactive)
+                               (yank)
+                               (indent-region (region-beginning) (region-end))))

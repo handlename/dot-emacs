@@ -24,6 +24,9 @@
     open-junk-file
     smartparens
     sequential-command
+    ag
+    wgrep
+    wgrep-ag
 
     ;; minor mode
     auto-complete

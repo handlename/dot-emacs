@@ -72,3 +72,6 @@
 ;;; upcase and downcase
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;;; show paren
+(show-paren-mode t)

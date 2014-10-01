@@ -33,8 +33,11 @@
     yasnippet
 
     ;; major mode
+    coffee-mode
     go-mode
     markdown-mode
+    web-mode
+    yaml-mode
     ))
 
 (dolist (package my:packages)

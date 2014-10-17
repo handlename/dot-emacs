@@ -41,7 +41,7 @@
 (setq shell-file-name "/bin/bash")
 
 ;;; for m-x shell
-(setq explicit-shell-file-name "/usr/local/bin/zsh")
+(defvar explicit-shell-file-name "/usr/local/bin/zsh")
 
 ;;; encoding settings
 (prefer-coding-system 'utf-8-unix)

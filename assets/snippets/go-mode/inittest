@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: default for test file
+# --
+package $0
+
+import (
+	"testing"
+)

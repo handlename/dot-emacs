@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: dump something
+# --
+fmt.Printf("%#v\n", $0)

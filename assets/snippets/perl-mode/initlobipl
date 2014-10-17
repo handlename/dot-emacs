@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: default perl script of Lobi
+# --
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use utf8;
+
+use Nakamap::Batch (
+    $0
+);
+
+my $argv = +{%Nakamap::Batch::argv};
+
+=head1 SYNOPSIS
+
+=head2 OPTIONS
+
+=cut

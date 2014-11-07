@@ -10,6 +10,9 @@ Usage:
 
 Description:
     This script is ...
+
+Options:
+    --hoge	hogefuga
 EOF
 }
 
@@ -17,12 +20,23 @@ function main {
     echo "main process"
 }
 
-case \${1} in
-    help|--help|-h)
-        usage
-        ;;
+while [ $# -gt 0 ];
+do
+    case \${1} in
+        help|--help|-h)
+            usage
+            exit 0
+            ;;
+        --debug|-d)
+            set -x
+            ;;
+        --hoge)
+            # do something for hoge
+            # if you need value of --hoge (ex: --hoge "this!!")
+            # you must `shift` to shift args.
+            ;;
+    esac
+    shift
+done
 
-    *)
-        main
-        ;;
-esac
+main

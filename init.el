@@ -20,6 +20,7 @@
     helm-projectile
     ace-jump-mode
     editorconfig
+    expand-region
     popwin
     projectile
     flycheck

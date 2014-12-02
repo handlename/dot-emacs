@@ -3,6 +3,8 @@
 ;;;; quelpa
 (require 'package)
 (package-initialize)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (unless (require 'quelpa nil t)
   (with-temp-buffer
     (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
@@ -16,6 +18,7 @@
     ;; utils
     helm
     helm-projectile
+    ace-jump-mode
     editorconfig
     popwin
     projectile

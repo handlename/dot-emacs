@@ -7,7 +7,7 @@
 (global-set-key (kbd "C-c a")   'align)
 (global-set-key (kbd "C-c M-a") 'align-regexp)
 (global-set-key (kbd "C-h")     'backward-delete-char)
-(global-set-key (kbd "C--")     'goto-line)
+(global-set-key (kbd "C-x -")   'goto-line)
 (global-set-key (kbd "C-t")     'next-multiframe-window)
 (global-set-key (kbd "C-M-r")   'replace-regexp)
 (global-set-key (kbd "C-r")     'replace-string)

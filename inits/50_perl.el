@@ -15,4 +15,5 @@
  '(cperl-indent-parens-as-block t)
  '(cperl-close-paren-offset -4)
  '(cperl-tab-always-indent t)
- '(cperl-highlight-variables-indiscriminately t))
+ '(cperl-highlight-variables-indiscriminately t)
+ '(cperl-indent-subs-specially nil))

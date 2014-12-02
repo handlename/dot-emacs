@@ -46,6 +46,10 @@
 (dolist (package my:packages)
   (quelpa package))
 
+;; I want use latest one!
+(quelpa '(cperl-mode :repo "jrockway/cperl-mode" :fetcher github) :upgrade nil)
+
 ;;;; init-loader
+
 (require 'init-loader)
 (init-loader-load (concat user-emacs-directory "/inits"))

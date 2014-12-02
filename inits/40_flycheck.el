@@ -25,3 +25,12 @@
           (lambda ()
             (flycheck-mode t)
             (setq flycheck-checker 'perl-project-libs)))
+
+;;; for go
+(flycheck-define-checker go-vet
+  "A go syntax checker."
+  :command ("go" "tool" "vet" "-composites=false" source-inplace)
+  :error-patterns ((error line-start
+                          (file-name) ":" line ":" (minimal-match (message))
+                          line-end))
+  :modes (go-mode))

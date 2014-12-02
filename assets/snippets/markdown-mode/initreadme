@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: readme template
+# --
+# ${1:product name}
+
+$1 is ...
+
+## Example
+
+## Installation
+
+## Usage
+
+## Licence
+
+[MIT](https://github.com/handlename/$2/blob/master/LICENSE)
+
+## Author
+
+[handlename](https://github.com/handlename)

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: default for sh file
+# --
+#!/bin/bash

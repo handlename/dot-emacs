@@ -3,7 +3,7 @@
 # --
 #!/bin/bash
 
-function usage {
+usage() {
     cat<<EOF
 Usage:
     $(basename \$0)
@@ -16,7 +16,7 @@ Options:
 EOF
 }
 
-function main {
+main() {
     echo "main process"
 }
 

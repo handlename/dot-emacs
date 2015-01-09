@@ -10,17 +10,17 @@ import (
 	"github.com/codegangsta/cli"
 )
 
-var logger = log.New(os.Stderr, "DEBUG: ", log.Ltime|log.Lshortfile)
+var debugLogger = log.New(os.Stderr, "DEBUG: ", log.Ltime|log.Lshortfile)
 
 func debug(v ...interface{}) {
 	if os.Getenv("DEBUG") != "" {
-		logger.Println(v...)
+		debugLogger.Println(v...)
 	}
 }
 
 func debugf(format string, v ...interface{}) {
 	if os.Getenv("DEBUG") != "" {
-		logger.Printf(format, v...)
+		debugLogger.Printf(format, v...)
 	}
 }
 

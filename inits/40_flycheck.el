@@ -34,3 +34,7 @@
                           (file-name) ":" line ":" (minimal-match (message))
                           line-end))
   :modes (go-mode))
+
+;;; for elisp
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))

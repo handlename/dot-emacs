@@ -11,6 +11,7 @@
                                 "\\*blockdiag\\*"
                                 "\\*compilation\\*"
                                 "\\*Gofmt Errors\\*"
+                                "\\*godoc"
                                 "\\*helm"
                                 "\\*quickrun\\*"
                                 "\\.po"

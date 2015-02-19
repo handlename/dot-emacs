@@ -31,6 +31,7 @@
     ag
     wgrep
     wgrep-ag
+    mmm-mode
     quickrun
     hydra
 

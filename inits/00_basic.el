@@ -69,3 +69,8 @@
 
 ;;; show paren
 (show-paren-mode t)
+
+;;; save cursor
+(when (require 'saveplace nil t)
+  (setq-default save-place t)
+  (custom-set-variables '(save-place-file (concat user-emacs-directory "/.saved-places"))))

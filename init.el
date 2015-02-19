@@ -31,10 +31,12 @@
     ag
     wgrep
     wgrep-ag
+    hydra
 
     ;; minor mode
     auto-complete
     yasnippet
+    highlight-symbol
 
     ;; major mode
     coffee-mode

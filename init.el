@@ -31,6 +31,7 @@
     ag
     wgrep
     wgrep-ag
+    quickrun
     hydra
 
     ;; minor mode

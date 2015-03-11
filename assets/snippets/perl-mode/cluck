@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cluck
+# key: cluck
+# --
+use Carp; Carp::cluck();

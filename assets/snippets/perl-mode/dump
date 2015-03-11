@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: dump object with Data::Dumper
+# key: dump
+# --
+use Data::Dumper; warn Dumper $0

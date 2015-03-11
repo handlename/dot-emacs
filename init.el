@@ -29,6 +29,7 @@
     flycheck
     flycheck-pos-tip
     open-junk-file
+    point-undo
     smartparens
     sequential-command
     ag

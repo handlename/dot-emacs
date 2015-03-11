@@ -16,8 +16,11 @@
     solarized-theme
 
     ;; utils
+    migemo
     helm
+    helm-migemo
     helm-projectile
+    helm-swoop
     ace-jump-mode
     editorconfig
     expand-region

@@ -45,3 +45,15 @@
     :front "^```\\(html\\|js\\|css\\)[\n\r]+"
     :back "^```$")))
 (mmm-add-mode-ext-class 'markdown-mode nil 'markdown-web)
+
+;;; orgtbl-mode
+(load-library "org-table")
+(defun markdown-cleanup-org-tables ()
+  (save-excursion
+    (goto-char (point-min))
+    (while (search-forward "-+-" nil t) (replace-match "-|-"))))
+
+(add-hook 'markdown-mode-hook 'orgtbl-mode)
+(add-hook 'markdown-mode-hook
+          (lambda()
+            (add-hook 'before-save-hook 'markdown-cleanup-org-tables nil 'make-it-local)))

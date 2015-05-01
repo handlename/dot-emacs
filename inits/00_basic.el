@@ -44,7 +44,7 @@
 (defvar explicit-shell-file-name "/usr/local/bin/zsh")
 
 ;;; encoding settings
-(prefer-coding-system 'utf-8-unix)
+;;; To avoid overwrite by other packages, written in 90_basic.el
 
 ;;; decrease gc
 (setq gc-cons-threshold (* 50 gc-cons-threshold))

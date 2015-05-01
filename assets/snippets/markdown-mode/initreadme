@@ -13,7 +13,7 @@ $1 is ...
 
 ## Licence
 
-[MIT](https://github.com/handlename/$2/blob/master/LICENSE)
+[MIT](https://github.com/handlename/${2:repository name}/blob/master/LICENSE)
 
 ## Author
 

@@ -8,6 +8,7 @@
                  cperl-mode
                  emacs-lisp-mode
                  go-mode
+                 ruby-mode
                  sh-mode
                  ))
 

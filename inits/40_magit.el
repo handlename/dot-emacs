@@ -1,0 +1,6 @@
+(define-prefix-command 'my-magit-keymap)
+(define-key my-magit-keymap (kbd "s") 'magit-status)
+(define-key my-magit-keymap (kbd "d") 'magit-diff-working-tree)
+(define-key my-magit-keymap (kbd "l") 'magit-log)
+(define-key my-magit-keymap (kbd "L") 'magit-log-long)
+(global-set-key (kbd "C-x m") 'my-magit-keymap)

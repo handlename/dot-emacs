@@ -39,6 +39,14 @@
 (mmm-add-mode-ext-class 'markdown-mode nil 'markdown-perl)
 
 (mmm-add-classes
+ '((markdown-go
+    :submode go-mode
+    :face mmm-declaration-submode-face
+    :front "^```go[\n\r]+"
+    :back "^```$")))
+(mmm-add-mode-ext-class 'markdown-mode nil 'markdown-go)
+
+(mmm-add-classes
  '((markdown-web
     :submode web-mode
     :face mmm-declaration-submode-face

@@ -3,7 +3,7 @@
 
 (defvar howm-view-title-header "#")
 (defvar howm-file-name-format "%Y/%m/%Y-%m-%d-%H%M%S.md")
-(defvar howm-directory "~/doc/howm/")
+(defvar howm-directory "~/sync/doc/howm")
 (defvar howm-view-use-grep nil)
 (defvar howm-process-coding-system 'utf-8-unix)
 

@@ -14,7 +14,7 @@
   (setq line-spacing 0.2)
 
   ;; font
-  (defvar my:font "Ricty Discord")
+  (defvar my:font "Ricty Diminished")
   (set-face-attribute 'default nil
                       :family my:font
                       :height 140)

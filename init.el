@@ -12,6 +12,8 @@
 
 (defvar my:packages
   '(init-loader
+    let-alist
+
     ;; theme
     solarized-theme
 
@@ -47,6 +49,7 @@
     ;; major mode
     coffee-mode
     go-mode
+    go-autocomplete
     markdown-mode
     web-mode
     yaml-mode

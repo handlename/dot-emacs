@@ -40,6 +40,7 @@
     mmm-mode
     quickrun
     hydra
+    magit
 
     ;; minor mode
     auto-complete

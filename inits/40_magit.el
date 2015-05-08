@@ -1,6 +1,10 @@
-(define-prefix-command 'my-magit-keymap)
-(define-key my-magit-keymap (kbd "s") 'magit-status)
-(define-key my-magit-keymap (kbd "d") 'magit-diff-working-tree)
-(define-key my-magit-keymap (kbd "l") 'magit-log)
-(define-key my-magit-keymap (kbd "L") 'magit-log-long)
-(global-set-key (kbd "C-x m") 'my-magit-keymap)
+(global-set-key
+ (kbd "C-x m")
+ (defhydra my:hydra-magit (:exit t)
+   "magit"
+   ("s" magit-status "status")
+   ("d" magit-diff-unstaged "diff")
+   ("D" magit-diff-staged "diff cached")
+   ("c" magit-commit "commit")
+   ("l" magit-log "log")
+   ("L" magit-log-long "log long")))

@@ -42,9 +42,11 @@
   (ag query my:junk-file-dir))
 
 ;;; key bindings
-(define-prefix-command 'my:junk-keymap)
-(define-key my:junk-keymap (kbd "f") 'open-junk-file)
-(define-key my:junk-keymap (kbd "d") 'my:open-junk-dir)
-(define-key my:junk-keymap (kbd "l") 'my:helm-junk-file)
-(define-key my:junk-keymap (kbd "s") 'my:ag-junk-file)
-(global-set-key (kbd "C-x j") 'my:junk-keymap)
+(global-set-key
+ (kbd "C-x j")
+ (defhydra my:hydra-junk (:exit t)
+   "junk"
+   ("f" open-junk-file "file")
+   ("d" my:open-junk-dir "dir")
+   ("l" my:helm-junk-file "list")
+   ("s" my:ag-junk-file "search")))

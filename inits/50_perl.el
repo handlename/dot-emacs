@@ -1,5 +1,7 @@
 (defalias 'perl-mode 'cperl-mode)
 
+(setq cperl-electric-parens nil)
+
 ;;; use cperl-mode
 (add-to-list 'auto-mode-alist '("\\.pl$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("\\.pm$" . cperl-mode))

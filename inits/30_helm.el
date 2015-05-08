@@ -1,7 +1,6 @@
 (require 'helm-config)
 (require 'helm-migemo)
 (require 'helm-swoop)
-(require 'helm-projectile)
 
 ;;; helm-migemo
 ;; http://rubikitch.com/2014/12/25/helm-swoop/
@@ -23,8 +22,10 @@
 (setq helm-swoop-pre-input-function (lambda ()))
 
 ;;; helm-projectile
-;; fuzzy match will crush my emacs!!
+;; > helm-projectile-fuzzy-match
+;; > This needs to be set before loading helm-projectile.
 (setq helm-projectile-fuzzy-match nil)
+(require 'helm-projectile)
 
 ;;; keybindings
 (define-key global-map (kbd "C-c y") 'helm-show-kill-ring)

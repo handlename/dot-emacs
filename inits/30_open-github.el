@@ -1,7 +1,10 @@
 ;;; key bindings
+(add-to-list 'load-path (substitute-in-file-name "$GOPATH/src/github.com/handlename/open-github"))
+(require 'open-github)
 (define-prefix-command 'open-github-keymap)
 (define-key open-github-keymap (kbd "r") 'open-github:open-repository)
 (define-key open-github-keymap (kbd "f") 'open-github:open-file)
 (define-key open-github-keymap (kbd "b") 'open-github:open-blame)
 (define-key open-github-keymap (kbd "h") 'open-github:open-history)
+(define-key open-github-keymap (kbd "p") 'open-github:open-pull-request)
 (global-set-key (kbd "C-x G") 'open-github-keymap)

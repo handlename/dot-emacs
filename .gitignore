@@ -6,4 +6,5 @@ elpa
 inits/00_private.el*
 projectile-bookmarks.eld
 quelpa
+recentf
 shellenv.el

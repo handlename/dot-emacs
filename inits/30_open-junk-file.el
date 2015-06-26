@@ -19,7 +19,7 @@
 (require 'em-glob)
 (require 'helm)
 
-(defvar my:junk-file-list
+(defun my:junk-file-list ()
   (reverse
    (eshell-extended-glob (concat
                           (file-name-as-directory my:junk-file-dir)

@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: join items in array
+# --
+IFS="${1:separator}" eval '${2:result}="\${${3:array}[*]}"'

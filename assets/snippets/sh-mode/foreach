@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: loop for each items in array
+# --
+${1:items}=()
+
+for ${2:item} in \${$1[@]}; do
+    $0
+done

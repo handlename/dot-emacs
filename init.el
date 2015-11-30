@@ -41,6 +41,7 @@
     quickrun
     hydra
     magit
+    buffer-move
 
     ;; minor mode
     auto-complete

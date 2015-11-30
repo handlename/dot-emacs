@@ -26,3 +26,13 @@
    ("+" text-scale-increase "+")
    ("-" text-scale-decrease "-")
    ("=" (text-scale-adjust 0) "=")))
+
+(global-set-key
+ (kbd "C-x B")
+ (defhydra hydra-buffer-move
+   ()
+   "buffer-move"
+   ("<left>" buf-move-left "←")
+   ("<up>" buf-move-up "↑")
+   ("<right>" buf-move-right "→")
+   ("<down>" buf-move-down "↓")))
